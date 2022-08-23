@@ -1,4 +1,4 @@
 [submodule "themes/quartz"]
 	path = themes/quartz
-	url = https://github.com/jackyzha0/quartz.git
-	branch = hugo
+	url = https://github.com/yshalsager/quartz.git
+	branch = i18n
