@@ -1,13 +1,13 @@
 ---  
 created: 2022-06-06 05:58  
-updated: 2022-08-16 13:46  
+updated: 2022-08-23 16:54  
 title: The Complete JavaScript Course 2022 From Zero to Expert  
 share: true  
 website: en/notes/programming  
 ---  
   
-التكلفة:: 63ج  
-الحالة:: #مساق/مكتمل   
+التكلفة:: 63  
+الحالة:: #مساق/مكتمل  
 الرابط:: <https://www.udemy.com/course/the-complete-javascript-course/>  
 المدة:: 69 h  
 المعرفة:: [JavaScript](JavaScript)  
