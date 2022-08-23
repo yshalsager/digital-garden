@@ -1,7 +1,7 @@
 ---  
 updated: 2022-06-20 19:38  
 created: 2022-06-13 00:00  
-title: JavaScript Immediately Invoked Function Expressions (IIFE)  
+title: JavaScript Immediately Invoked Function Expressions IIFE  
   
 aliases:  
   - JavaScript Immediately Invoked Function Expressions (IIFE)  
