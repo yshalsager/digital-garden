@@ -1,0 +1,55 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+theme = "quartz"
+title = "yshalsager's Digital Garden"
+
+disablePathToLower = true
+enableGitInfo = true
+ignoreFiles = [
+  "/content/templates/*",
+  "/content/private/*",
+  "/content/notes/*",
+]
+paginate = 10
+relativeURLs = true
+summaryLength = 20
+
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[markup]
+[markup.tableOfContents]
+endLevel = 3
+ordered = true
+startLevel = 2
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineAnchors = ""
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+style = "dracula"
+[frontmatter]
+lastmod = ["lastmod", ":git", "date", "publishDate"]
+publishDate = ["publishDate", "date"]
+[markup.goldmark.renderer]
+unsafe = true
+
+[languages]
+[languages.en]
+contentDir = "content/en"
+languageName = "English"
+weight = 1
+
+[languages.ar]
+contentDir = "content/ar"
+languageDirection = 'rtl'
+languageName = "العربية"
+title = 'حديقة يُوسُف الرقمية'
+weight = 2
+[outputs]
+home = ["HTML", "RSS"]

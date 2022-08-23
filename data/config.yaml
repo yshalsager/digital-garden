@@ -1,0 +1,22 @@
+name: yshalsager
+description: yshalsager's Digital Garden, a place where I share my notes with the world!
+page_title: "🪴 yshalsager's Digital Garden"
+enableToc: true
+openToc: true
+enableLinkPreview: true
+enableCodeBlockTitle: true
+enableCodeBlockCopy: true
+enableCallouts: true
+enableLatex: true
+enableSPA: true
+enableFooter: true
+enableContextualBacklinks: true
+enableGitHubEdit: false
+enableRecentNotes: true
+links:
+  - link_name: GitHub
+    link: https://github.com/yshalsager
+  - link_name: Telegram
+    link: https://t.me/yshalsager
+favicon: |
+  <link rel="shortcut icon" href="/logo.png" type="image/png">

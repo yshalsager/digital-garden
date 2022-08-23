@@ -1,0 +1,10 @@
+.hugo_build.lock
+.idea/
+.vscode/
+/resources
+assets/indices/linkIndex.json
+assets/indices/contentIndex.json
+linkmap
+public/
+content/.obsidian
+content/private
