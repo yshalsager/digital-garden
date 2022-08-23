@@ -18,5 +18,5 @@ links:
     link: https://github.com/yshalsager
   - link_name: Telegram
     link: https://t.me/yshalsager
-favicon: |
-  <link rel="shortcut icon" href="/logo.png" type="image/png">
+favicon:
+  - { rel: "shortcut icon", href: "logo.png", type: "image/png" }
