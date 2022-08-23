@@ -7,7 +7,7 @@ website: en/notes/programming
 ---  
   
 التكلفة:: 63ج  
-الحالة:: #مساق/حالي  
+الحالة:: #مساق/مكتمل   
 الرابط:: <https://www.udemy.com/course/the-complete-javascript-course/>  
 المدة:: 69 h  
 المعرفة:: [JavaScript](JavaScript)  
@@ -16,7 +16,7 @@ website: en/notes/programming
 الوصف:: The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!  
 اﻷركان:: [التعلم](%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85)  
 اﻷهداف:: [Full Stack MERN Path](Full%20Stack%20MERN%20Path)  
-تاريخ اﻹنتهاء::  
+تاريخ اﻹنتهاء:: 2022-08-20  
 موصى به من؟:: [كالبنيان المرصوص]($%20%D9%83%D8%A7%D9%84%D8%A8%D9%86%D9%8A%D8%A7%D9%86%20%D8%A7%D9%84%D9%85%D8%B1%D8%B5%D9%88%D8%B5)  
   
 ---  
@@ -46,7 +46,7 @@ website: en/notes/programming
 - [Sets](JavaScript%20Sets)  
 - [Maps](JavaScript%20Maps)  
 - [Strings](JavaScript%20Strings)  
-- [Immediately Invoked Function Expressions (IIFE)](,%20JavaScript%20Immediately%20Invoked%20Function%20Expressions%20(IIFE))  
+- [Immediately Invoked Function Expressions IIFE](,%20JavaScript%20Immediately%20Invoked%20Function%20Expressions%20(IIFE))  
 - [Closures](JavaScript%20Closures)  
 - [Arrays](JavaScript%20Arrays)  
 - [Numbers](JavaScript%20Numbers)  
