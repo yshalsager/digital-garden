@@ -10,8 +10,8 @@ ignoreFiles = [
   "/content/private/*",
   "/content/notes/*",
 ]
-paginate = 10
-relativeURLs = true
+paginate = 20
+relativeURLs = false
 summaryLength = 20
 
 defaultContentLanguage = 'en'
@@ -19,7 +19,7 @@ defaultContentLanguageInSubdir = true
 
 [markup]
 [markup.tableOfContents]
-endLevel = 3
+endLevel = 5
 ordered = true
 startLevel = 2
 [markup.highlight]
