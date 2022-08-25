@@ -8,7 +8,7 @@ website: en/notes
   
 # Telegram python libraries support chats  
   
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المعرفة:: [Python](Python)  
   
 [https://t.me/pythontelegrambotgroup](https://t.me/pythontelegrambotgroup)  
