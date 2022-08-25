@@ -8,7 +8,7 @@ website: en/notes
   
 # PPV System  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 الرابط: https://www.remnote.io/a/shared-ppv-life-os/60324a7c3c44ae003480b9a8  
   
 # 1 Intro & Overview of Pillars, Pipelines & Vaults  
