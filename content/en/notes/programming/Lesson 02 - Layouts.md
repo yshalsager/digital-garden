@@ -425,7 +425,7 @@ Ratio constraints are useful when:
 - Custom defined colors in colors.xml  
     
 ```xml  
-  <color name="my_green">#\12C700<_color>  
+  <color name="my_green">#12C700<_color>  
 ```  
     
 ```kotlin  
