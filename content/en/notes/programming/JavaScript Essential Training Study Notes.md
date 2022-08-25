@@ -9,7 +9,7 @@ website: en/notes/programming
 # JavaScript Essential Training Study Notes  
   
 التصنيف:: ملاحظات كورسات  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
   
 ## Where to put JS code?  
   
@@ -719,7 +719,7 @@ y = x--;
   
 ## Arrays  
   
-[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#\instance_methods](https:_/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)  
+[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods](https:_/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#instance_methods)  
   
 ```jsx  
 /**  
@@ -934,7 +934,7 @@ const addPack = currentPack => {
 ### Arrow functions and this  
   
 If you're using 'this' in a method within an object, and you then get an odd result, try turning the function into an arrow function to see if that solves the problem. Most likely, you're dealing with the wrong scope and an arrow function will help you get the correct scope because it doesn't carry its own scope with it.  
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#\arrow_functions](https:_/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#arrow_functions)  
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#arrow_functions](https:_/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#arrow_functions)  
   
 ```jsx  
 /**  
