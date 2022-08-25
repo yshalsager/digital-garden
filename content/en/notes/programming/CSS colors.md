@@ -2,7 +2,6 @@
 title: CSS colors  
 created: 2021-12-08 09:00  
 updated: 2021-12-08 09:44  
-parent: [](CSS%20Essential%20Training%20Notes)  
 share: true  
 website: en/notes/programming  
 ---  
