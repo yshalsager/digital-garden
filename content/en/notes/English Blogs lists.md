@@ -8,7 +8,7 @@ website: en/notes
   
 # English Blogs lists  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
   
 [Blogroll](https://kevq.uk/blogroll/)  
   
