@@ -90,12 +90,12 @@ section p { ... } -->
 <!-- Selects only links, inside of a paragraph, inside of section  
 section p a { ... } -->  
 <section>  
-  <p>There's a <a href="#\$_a> inside this paragraph.</p>  
+  <p>There's a <a href="#\">link<_a> inside this paragraph.</p>  
   <!-- this -->  
   <p>Paragraph</p>  
-  <a href="#\$_a>  
+  <a href="#\">Link<_a>  
 </section>  
-<a href="#\$_a>  
+<a href="#\">Link<_a>  
 ```  
   
 ```html  

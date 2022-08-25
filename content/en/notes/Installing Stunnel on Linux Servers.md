@@ -9,7 +9,7 @@ website: en/notes
 # Installing Stunnel on Linux Servers  
   
 التصنيف:: Linux  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 الرابط: <https://charlesreid1.com/wiki/Stunnel/SSH>  
 المعرفة:: [Linux](Linux)  
   

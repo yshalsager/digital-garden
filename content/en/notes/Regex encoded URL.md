@@ -6,7 +6,7 @@ share: true
 website: en/notes  
 ---  
   
-#ملاحظة/مؤرشفة  
+#\ملاحظة_مؤرشفة  
 المعرفة:: [](Regex)  
 المراجع:: https://stackoverflow.com/questions/57240674/regex-about-url-encoded-string  
   

@@ -10,7 +10,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript)  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المراجع:: [JavaScript Essential Training](JavaScript%20Essential%20Training)  
   
 ---  

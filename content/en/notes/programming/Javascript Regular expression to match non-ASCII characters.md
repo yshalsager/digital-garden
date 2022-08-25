@@ -6,7 +6,7 @@ share: true
 website: en/notes/programming  
 ---  
   
-#ملاحظة/مؤرشفة  
+#\ملاحظة_مؤرشفة  
 المعرفة:: [](Regex)  
 المراجع:: https://stackoverflow.com/a/48902765  
   

@@ -8,7 +8,7 @@ website: en/notes
   
 # VPS choosing  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المعرفة:: [Linux](Linux)  
   
 ---  

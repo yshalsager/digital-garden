@@ -8,7 +8,7 @@ website: en/notes
   
 # Convert PDF to PNG  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المعرفة:: [Linux](Linux)  
   
 ---  

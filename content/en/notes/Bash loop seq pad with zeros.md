@@ -6,7 +6,7 @@ share: true
 website: en/notes  
 ---  
   
-#ملاحظة/مؤرشفة  
+#\ملاحظة_مؤرشفة  
 المعرفة:: [](Bash), [Linux](Linux)  
   
 ```bash  

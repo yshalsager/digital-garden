@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript)  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المراجع:: [The Complete JavaScript Course 2022 From Zero to Expert](The%20Complete%20JavaScript%20Course%202022%20From%20Zero%20to%20Expert)  
   
 ---  
@@ -41,7 +41,7 @@ website: en/notes/programming
 >  
 	  <div class="operations__icon operations__icon--1">  
 		<svg>  
-		  <use xlink:href="img/icons.svg#icon-upload"></use>  
+		  <use xlink:href="img/icons.svg#\icon-upload"><_use>  
 		</svg>  
 	  </div>  
 	  <h5 class="operations__header">  
@@ -55,7 +55,7 @@ website: en/notes/programming
 	<div class="operations__content operations__content--2">  
 	  <div class="operations__icon operations__icon--2">  
 		<svg>  
-		  <use xlink:href="img/icons.svg#icon-home"></use>  
+		  <use xlink:href="img/icons.svg#\icon-home"><_use>  
 		</svg>  
 	  </div>  
 	  <h5 class="operations__header">  
@@ -68,7 +68,7 @@ website: en/notes/programming
 	<div class="operations__content operations__content--3">  
 	  <div class="operations__icon operations__icon--3">  
 		<svg>  
-		  <use xlink:href="img/icons.svg#icon-user-x"></use>  
+		  <use xlink:href="img/icons.svg#\icon-user-x"><_use>  
 		</svg>  
 	  </div>  
 	  <h5 class="operations__header">  

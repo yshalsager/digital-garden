@@ -8,7 +8,7 @@ website: en/notes
   
 # facebook / youtube to telegram live with ffmpeg  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المعرفة:: [Linux](Linux)  
   
 ---  

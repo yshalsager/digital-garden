@@ -8,7 +8,7 @@ website: en/notes
   
 # youtube-dl download subtitle only  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 الرابط: <https://superuser.com/a/927532>  
 المعرفة:: [Linux](Linux)  
   
