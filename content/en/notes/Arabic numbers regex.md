@@ -8,7 +8,7 @@ website: en/notes
   
 # Arabic numbers regex  
   
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
   
 `[\u0660-\u0669]`  
   
