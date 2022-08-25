@@ -10,7 +10,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [CSS](CSS), [JavaScript](JavaScript)  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
   
 ---  
   
@@ -23,11 +23,11 @@ website: en/notes/programming
   <nav class="main-nav">  
     <ul class="main-nav-list">  
       <li><a class="main-nav-link" href="#how">How it works</a></li>  
-      <li><a class="main-nav-link" href="#meals">Meals</a></li>  
+      <li><a class="main-nav-link" href="#\meals">Meals<_a></li>  
       <li>  
-        <a class="main-nav-link" href="#testimonials">Testimonials</a>  
+        <a class="main-nav-link" href="#\testimonials">Testimonials<_a>  
       </li>  
-      <li><a class="main-nav-link" href="#pricing">Pricing</a></li>  
+      <li><a class="main-nav-link" href="#\pricing">Pricing<_a></li>  
       <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>  
     </ul>  
   </nav>  
