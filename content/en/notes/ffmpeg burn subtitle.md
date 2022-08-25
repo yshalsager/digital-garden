@@ -8,7 +8,7 @@ website: en/notes
   
 # ffmpeg burn subtitle  
   
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المعرفة:: [Linux](Linux)  
   
 ---  
