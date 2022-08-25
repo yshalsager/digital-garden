@@ -8,7 +8,7 @@ website: en/notes
   
 # SS/VMESS/trojan subscriptions  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
   
 [https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub](https://raw.githubusercontent.com/ssrsub/ssr/master/ss-sub)  
   
