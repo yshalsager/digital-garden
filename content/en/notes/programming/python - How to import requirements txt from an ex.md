@@ -8,7 +8,7 @@ website: en/notes/programming
   
 # python - How to import requirements.txt from an existing project using Poetry  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 الرابط: https://stackoverflow.com/a/62787881/10371745  
 المعرفة:: [Python](Python)  
   
