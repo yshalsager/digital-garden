@@ -8,7 +8,7 @@ website: ar/notes
   
 # مصادر لتعلم Obsidian  
   
-الحالة:: #\ملاحظة_نشطة  
+الحالة:: #ملاحظة_نشطة  
   
 [Linking Your Thinking](https://www.youtube.com/channel/UC85D7ERwhke7wVqskV_DZUA)  
   
