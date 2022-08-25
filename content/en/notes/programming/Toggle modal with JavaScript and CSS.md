@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript), [CSS](CSS)  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المراجع:: [The Complete JavaScript Course 2022 From Zero to Expert](The%20Complete%20JavaScript%20Course%202022%20From%20Zero%20to%20Expert)  
   
 ---  
