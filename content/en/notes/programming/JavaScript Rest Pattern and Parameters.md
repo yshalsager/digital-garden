@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript)  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المراجع:: [syahshiimi's notes](https://github.com/syahshiimi/second-brain/blob/2e6b1c9687a0b796978263a54191ebe31e7b608f/05%20Learning/00%20JavaScript/202107142210%20Rest%20Pattern%20And%20Parameters.md), [The Complete JavaScript Course 2022 From Zero to Expert](The%20Complete%20JavaScript%20Course%202022%20From%20Zero%20to%20Expert)  
   
 ---  
