@@ -8,7 +8,7 @@ website: en/notes
   
 # How to download portion of video with youtube-dl command?  
   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 الرابط: <https://unix.stackexchange.com/a/388148>  
 المعرفة:: [Linux](Linux)  
   
