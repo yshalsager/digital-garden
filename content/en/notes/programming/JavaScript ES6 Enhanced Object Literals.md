@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript)  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: [The Complete JavaScript Course 2022 From Zero to Expert](The%20Complete%20JavaScript%20Course%202022%20From%20Zero%20to%20Expert), [syahshiimi's notes](https://github.com/syahshiimi/second-brain/blob/bfa3eed7bb280d6516806e517cba1e8d3822ca21/05%20Learning/00%20JavaScript/202107222147%20Enhanced%20Object%20Literals.md), <https://www.sitepoint.com/es6-enhanced-object-literals/>  
   
 ---  
