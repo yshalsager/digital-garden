@@ -7,7 +7,7 @@ website: en/notes/programming
 ---  
   
 التكلفة:: 63  
-الحالة:: #\مساق_مكتمل  
+الحالة:: #مساق_مكتمل  
 الرابط:: <https://www.udemy.com/course/the-complete-javascript-course/>  
 المدة:: 69 h  
 المعرفة:: [JavaScript](JavaScript)  
