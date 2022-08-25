@@ -10,7 +10,7 @@ website: ar/notes
 ---  
   
 المعرفة:: [](Regex)  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: [Regex Match Arabic Letters](../en/Regex%20Match%20Arabic%20Letters)  
   
 ---  
