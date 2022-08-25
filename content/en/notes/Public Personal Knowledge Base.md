@@ -8,7 +8,7 @@ website: en/notes
   
 # Public Personal Knowledge Base  
   
-الحالة:: #ملاحظة/نشطة  
+الحالة:: #\ملاحظة_نشطة  
   
 [](%D9%85%D8%B5%D8%A7%D8%AF%D8%B1%20%D9%84%D8%AA%D8%B9%D9%84%D9%85%20Obsidian)  
   
