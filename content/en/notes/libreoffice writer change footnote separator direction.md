@@ -9,7 +9,7 @@ website: en/notes
 ---  
   
 المعرفة::   
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المراجع:: https://ask.libreoffice.org/t/how-to-change-the-footnote-separator-direction/53637/2  
   
 ---  
