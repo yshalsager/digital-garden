@@ -220,7 +220,7 @@ The style has a parent, just as a theme can have a parent. But this time, instea
   
 ```xml  
 <item name="android:textSize">24sp</item>  
-<item name="android:textColor">#\555555<_item>  
+<item name="android:textColor">#555555<_item>  
 ```  
   
 4. Define another style for the subtitles. Name it `TextAppearance.Subtitle`.  
@@ -1305,7 +1305,7 @@ AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
   
 To customize the dark theme, create folders with the `-night` qualifier for the dark theme to use. For example, you can have specific colors in night mode by creating a folder called `values-night`.  
   
-1. Visit the [material.io color picker tool](https://material.io/tools/color/#\!_) and create a night-theme color palette. For example, you could base it on a dark blue color.  
+1. Visit the [material.io color picker tool](https://material.io/tools/color/#!_) and create a night-theme color palette. For example, you could base it on a dark blue color.  
 2. Generate and download the **colors.xml** file.  
 3. Switch to **Project Files** view to list all the folders in your project.  
 4. Find the **res** folder and expand it.  

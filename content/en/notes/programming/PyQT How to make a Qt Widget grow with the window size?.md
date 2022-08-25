@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة::  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: <https://stackoverflow.com/a/6045152>  
   
 ---  

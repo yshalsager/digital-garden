@@ -10,7 +10,7 @@ website: en/notes
 ---  
   
 المعرفة:: [](Regex)  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: <https://ihateregex.io/expr/emoji/>, <https://www.regextester.com/106421>  
   
 ---  

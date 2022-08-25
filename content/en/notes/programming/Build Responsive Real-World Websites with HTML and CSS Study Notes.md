@@ -24,14 +24,14 @@ website: en/notes/programming
   
 1. [](#Typography)  
 2. [](#Colors)  
-3. [](#\Images_Illustrations)  
+3. [](#Images_Illustrations)  
 4. [](#Icons)  
 5. [](#Shadows)  
 6. [](#Border-radius)  
 7. [](#White%20Space)  
 8. [](#Visual%20Hierarchy)  
 9. [](#User%20Experience)  
-10. [](#\Components_Layout)  
+10. [](#Components_Layout)  
   
 ### Typography  
   
@@ -75,15 +75,15 @@ website: en/notes/programming
 #### Choose the Right Color  
   
 1. Make the main color **match your website’s personality**: colors convey meaning!  
-   - <mark style="background: #\FF5582A6;">Red<_mark> draws a lot of attention, and symbolizes power, passion, and excitement.  
-   - <mark style="background: #\FFB86CA6;">Orange<_mark> is less aggressive, and conveys happiness, cheerfulness, and creativity.  
-   - <mark style="background: #\FFF3A3A6;">Yellow<_mark> means joy, brightness, and intelligence.  
-   - <mark style="background: #\BBFABBA6;">Greens<_mark> represents harmony, nature, growth, and health.  
-   - <mark style="background: #\ADCCFFA6;">Blue<_mark> is associated with peace, trustworthiness, and professionalism.  
-   - <mark style="background: #\D2B3FFA6;">Purple<_mark> conveys wealth, wisdom, and magic.  
-   - <mark style="background: #\FFB8EBA6;">Pink<_mark> represents romance, care, and affection.  
+   - <mark style="background: #FF5582A6;">Red<_mark> draws a lot of attention, and symbolizes power, passion, and excitement.  
+   - <mark style="background: #FFB86CA6;">Orange<_mark> is less aggressive, and conveys happiness, cheerfulness, and creativity.  
+   - <mark style="background: #FFF3A3A6;">Yellow<_mark> means joy, brightness, and intelligence.  
+   - <mark style="background: #BBFABBA6;">Greens<_mark> represents harmony, nature, growth, and health.  
+   - <mark style="background: #ADCCFFA6;">Blue<_mark> is associated with peace, trustworthiness, and professionalism.  
+   - <mark style="background: #D2B3FFA6;">Purple<_mark> conveys wealth, wisdom, and magic.  
+   - <mark style="background: #FFB8EBA6;">Pink<_mark> represents romance, care, and affection.  
    - <mark style="background: brown;">Brown</mark> is associated with nature, durability and comfort.  
-   - <mark style="background: #\CACFD9A6;">Black<_mark> symbolizes power, elegance and minimalism, but also grief and sorrow.  
+   - <mark style="background: #CACFD9A6;">Black<_mark> symbolizes power, elegance and minimalism, but also grief and sorrow.  
 2. Use a **good color tone**! Don’t choose a random tone or CSS named colors.  
    - <https://yeun.github.io/open-color/>  
    - <https://tailwindcss.com/docs/customizing-colors/>  

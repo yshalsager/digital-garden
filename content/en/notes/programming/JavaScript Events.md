@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript)  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: [JavaScript Essential Training](JavaScript%20Essential%20Training), [The Complete JavaScript Course 2022 From Zero to Expert](The%20Complete%20JavaScript%20Course%202022%20From%20Zero%20to%20Expert), <https://javascript.info/bubbling-and-capturing>, <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture>  
   
 ---  
@@ -157,13 +157,13 @@ In the **bubbling** phase, the exact opposite of the **capturing** phase occ
 <img src="img/logo.png" alt="Bankist logo" class="nav__logo" id="logo" designer="Jonas" data-version-number="3.0"/>  
 <ul class="nav__links">  
   <li class="nav__item">  
-	<a class="nav__link" href="#\section--1">Features<_a>  
+	<a class="nav__link" href="#section--1">Features<_a>  
   </li>  
   <li class="nav__item">  
-	<a class="nav__link" href="#\section--2">Operations<_a>  
+	<a class="nav__link" href="#section--2">Operations<_a>  
   </li>  
   <li class="nav__item">  
-	<a class="nav__link" href="#\section--3">Testimonials<_a>  
+	<a class="nav__link" href="#section--3">Testimonials<_a>  
   </li>  
   <li class="nav__item">  
 	<a class="nav__link nav__link--btn btn--show-modal" href="#">Open account</a>  

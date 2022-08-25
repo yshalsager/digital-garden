@@ -9,7 +9,7 @@ website: en/notes/programming
 ---  
   
 المعرفة:: [JavaScript](JavaScript)  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: [The Complete JavaScript Course 2022 From Zero to Expert](The%20Complete%20JavaScript%20Course%202022%20From%20Zero%20to%20Expert), [JadeHendricks's notes](https://github.com/JadeHendricks/the-complete-javascript-course-2019/blob/9f805e5d4e3ca73a628eb2b51d22690928ec565c/How%20Javascript%20Works/This/script.js), [JadeHendricks's notes](https://github.com/JadeHendricks/the-complete-javascript-course-2019/blob/9f805e5d4e3ca73a628eb2b51d22690928ec565c/How%20Javascript%20Works/How%20Javascript%20Works.txt)  
   
 ---  

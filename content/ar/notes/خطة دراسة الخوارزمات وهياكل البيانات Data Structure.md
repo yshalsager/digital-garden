@@ -9,7 +9,7 @@ website: ar/notes
 # خطة دراسة الخوارزمات وهياكل البيانات Data Structures and Algorithms  
   
 المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)  
-الحالة:: #\ملاحظة_نشطة  
+الحالة:: #ملاحظة_نشطة  
   
 # **Master the Coding Interview: Data Structures + Algorithms**  
   

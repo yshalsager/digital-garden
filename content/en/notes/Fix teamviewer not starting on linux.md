@@ -9,7 +9,7 @@ website: en/notes
 # Fix teamviewer not starting on linux  
   
 التصنيف:: Linux  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المعرفة:: [Linux](Linux)  
   
 ---  

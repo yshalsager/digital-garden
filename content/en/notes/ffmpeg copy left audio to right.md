@@ -8,7 +8,7 @@ website: en/notes
   
 # ffmpeg copy left audio to right  
   
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 الرابط: <https://superuser.com/a/1592759>  
 المعرفة:: [Linux](Linux)  
   

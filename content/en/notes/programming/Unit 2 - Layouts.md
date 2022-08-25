@@ -322,13 +322,13 @@ tools:text="Tip Amount: $10"
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <resources>  
-    <color name="purple_200">#\FFBB86FC<_color>  
-    <color name="purple_500">#\FF6200EE<_color>  
-    <color name="purple_700">#\FF3700B3<_color>  
-    <color name="teal_200">#\FF03DAC5<_color>  
-    <color name="teal_700">#\FF018786<_color>  
-    <color name="black">#\FF000000<_color>  
-    <color name="white">#\FFFFFFFF<_color>  
+    <color name="purple_200">#FFBB86FC<_color>  
+    <color name="purple_500">#FF6200EE<_color>  
+    <color name="purple_700">#FF3700B3<_color>  
+    <color name="teal_200">#FF03DAC5<_color>  
+    <color name="teal_700">#FF018786<_color>  
+    <color name="black">#FF000000<_color>  
+    <color name="white">#FFFFFFFF<_color>  
 </resources>  
 ```  
 * Use the colors in your theme in `themes.xml`:  

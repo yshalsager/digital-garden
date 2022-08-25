@@ -9,7 +9,7 @@ website: en/notes
 ---  
   
 المعرفة:: [Linux](Linux)  
-الحالة:: #\ملاحظة_مؤرشفة  
+الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: <https://github.com/jgm/pandoc/issues/3140>  
   
 ---  
