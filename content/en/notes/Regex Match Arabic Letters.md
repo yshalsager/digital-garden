@@ -10,7 +10,7 @@ website: en/notes
 ---  
   
 المعرفة:: [](Regex)  
-الحالة:: #ملاحظة/مؤرشفة  
+الحالة:: #\ملاحظة_مؤرشفة  
 المراجع:: <https://gist.githubusercontent.com/Humoud/f40f58cd85c5935a444c/raw/c77dffa4c2ab75411f0c70c6bfcd6e1bcdbaf3e1/regex-arabic.md>  
   
 ---  
