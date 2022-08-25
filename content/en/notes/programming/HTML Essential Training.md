@@ -8,7 +8,7 @@ website: en/notes/programming
 # HTML Essential Training  
   
 التكلفة:: 0  
-الحالة:: #مساق/مكتمل  
+الحالة:: #\مساق_مكتمل  
 الرابط:: <https://www.linkedin.com/learning/html-essential-training-4>  
 المدة:: 2h45m  
 المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)  
