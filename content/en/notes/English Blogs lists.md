@@ -4,7 +4,10 @@ updated: 2021-12-21 00:00
 title: English Blogs lists  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # English Blogs lists  
   
