@@ -6,7 +6,10 @@ aliases:
   - Pandoc set docx output direction to RTL  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [Linux](Linux)  
 الحالة:: #ملاحظة_مؤرشفة  
