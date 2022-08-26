@@ -4,7 +4,10 @@ updated: 2022-06-20 18:25
 title: Programming Foundations Databases  
 share: true  
 website: en/notes/programming  
+tags:  
+  - مساق_مكتمل  
 ---  
+  
 # Programming Foundations: Databases  
   
 التكلفة:: 0  
