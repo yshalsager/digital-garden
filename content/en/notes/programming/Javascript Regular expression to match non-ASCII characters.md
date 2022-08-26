@@ -4,7 +4,10 @@ updated: 2022-06-20 18:34
 title: Javascript Regular expression to match non-ASCII characters  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 #ملاحظة_مؤرشفة  
 المعرفة:: [](Regex)  
