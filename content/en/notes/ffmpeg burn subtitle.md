@@ -4,7 +4,10 @@ updated: 2021-12-28 00:00
 title: ffmpeg burn subtitle  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # ffmpeg burn subtitle  
   
