@@ -4,7 +4,10 @@ updated: 2021-12-24 00:00
 title: خطة دراسة Flutter  
 share: true  
 website: ar/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # خطة دراسة Flutter  
   
@@ -36,8 +39,3 @@ website: ar/notes
 المدة المتوقعة للانتهاء من ال ٣ كورسات بأذن الله ٩ اسابيع  
 النتائج المتوقعة حوالي ٢٠ مشروع هتعملهم وتضيفهم على حسابك وتقدم بعديها للشغل ك Junior SW Engineer  
   
----  
-  
-[GitHub - olexale/flutter_roadmap: Highly Subjective Roadmap to Flutter Development](https://github.com/olexale/flutter_roadmap)  
-  
-[GitHub - Tarikul711/flutter-development-roadmap: Flutter App Developer Roadmap - A complete roadmap to learn Flutter App Development. I tried to learn flutter using this roadmap. If you want to add something please contribute to the project. Happy Learning](https://github.com/Tarikul711/flutter-development-roadmap)  

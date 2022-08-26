@@ -4,7 +4,10 @@ updated: 2021-02-13 00:00
 title: Fix teamviewer not starting on linux  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # Fix teamviewer not starting on linux  
   
@@ -12,11 +15,3 @@ website: en/notes
 الحالة:: #ملاحظة_مؤرشفة  
 المعرفة:: [Linux](Linux)  
   
----  
-  
-Team Viewer - tv  
-  
-```bash  
-sudo teamviewer --daemon enable  
-sudo /opt/teamviewer/tv_bin/teamviewerd start  
-```  

@@ -4,7 +4,10 @@ updated: 2021-05-01 00:00
 title: python - How to import requirements txt from an ex  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # python - How to import requirements.txt from an existing project using Poetry  
   

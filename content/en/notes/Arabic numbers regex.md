@@ -4,7 +4,10 @@ updated: 2022-02-18 00:00
 title: Arabic numbers regex  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # Arabic numbers regex  
   
