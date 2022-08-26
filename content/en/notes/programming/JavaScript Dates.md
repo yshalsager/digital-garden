@@ -6,7 +6,10 @@ created: 2022-06-20 17:22
 updated: 2022-06-21 10:19  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة::[JavaScript](JavaScript)  
 الحالة:: #ملاحظة_مؤرشفة  
