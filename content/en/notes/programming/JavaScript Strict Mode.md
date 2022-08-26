@@ -2,12 +2,14 @@
 updated: 2022-06-20 19:38  
 created: 2022-06-03 00:00  
 title: JavaScript Strict Mode  
-  
 aliases:  
   - JavaScript Strict Mode  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [JavaScript](JavaScript)  
 الحالة:: #ملاحظة_مؤرشفة  
