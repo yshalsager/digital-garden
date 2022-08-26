@@ -4,7 +4,10 @@ updated: 2022-03-28 00:00
 title: مصادر لتعلم Obsidian  
 share: true  
 website: ar/notes  
+tags:  
+  - ملاحظة_نشطة  
 ---  
+  
   
 # مصادر لتعلم Obsidian  
   
