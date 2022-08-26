@@ -6,7 +6,10 @@ aliases:
   - JavaScript Spread Operator  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [JavaScript](JavaScript)  
 الحالة:: #ملاحظة_مؤرشفة  
