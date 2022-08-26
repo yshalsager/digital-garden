@@ -4,7 +4,10 @@ updated: 2021-12-24 00:00
 title: خطة دراسة Flutter  
 share: true  
 website: ar/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # خطة دراسة Flutter  
   
