@@ -6,9 +6,10 @@ aliases:
   - CSS Global Reset  
 share: true  
 website: en/notes/programming  
-share: true  
-website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 الحالة:: #ملاحظة_مؤرشفة  
 المعرفة:: [CSS](CSS)  
