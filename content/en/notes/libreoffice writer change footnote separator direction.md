@@ -6,7 +6,10 @@ aliases:
   - libreoffice writer change footnote separator direction  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة::   
 الحالة:: #ملاحظة_مؤرشفة  
