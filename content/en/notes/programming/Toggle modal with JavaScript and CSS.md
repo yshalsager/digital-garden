@@ -6,7 +6,10 @@ aliases:
   - Toggle modal with JavaScript and CSS  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [JavaScript](JavaScript), [CSS](CSS)  
 الحالة:: #ملاحظة_مؤرشفة  
