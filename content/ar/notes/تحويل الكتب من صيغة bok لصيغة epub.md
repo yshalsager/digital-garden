@@ -4,7 +4,10 @@ updated: 2021-06-25 00:00
 title: تحويل الكتب من صيغة bok لصيغة epub  
 share: true  
 website: ar/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # تحويل الكتب من صيغة bok لصيغة epub  
   
