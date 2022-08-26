@@ -6,7 +6,10 @@ aliases:
   - ffmpeg rtmp stream multiple output  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة::   
 الحالة:: #ملاحظة_مؤرشفة  
