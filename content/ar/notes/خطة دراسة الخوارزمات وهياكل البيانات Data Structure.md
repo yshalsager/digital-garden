@@ -4,7 +4,10 @@ updated: 2022-01-03 00:00
 title: خطة دراسة الخوارزمات وهياكل البيانات Data Structure  
 share: true  
 website: ar/notes  
+tags:  
+  - ملاحظة_نشطة  
 ---  
+  
   
 # خطة دراسة الخوارزمات وهياكل البيانات Data Structures and Algorithms  
   
