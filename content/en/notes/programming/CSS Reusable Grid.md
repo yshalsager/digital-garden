@@ -2,12 +2,14 @@
 updated: 2022-06-20 19:38  
 created: 2022-05-29 00:00  
 title: CSS Reusable Grid  
-  
 aliases:  
   - CSS Reusable Grid  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # CSS Reusable Grid  
   
