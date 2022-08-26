@@ -6,15 +6,12 @@ aliases:
   - PyQT How to make a Qt Widget grow with the window size?  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة::  
 الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: <https://stackoverflow.com/a/6045152>  
   
----  
-  
-In Designer, activate the centralWidget and assign a layout, e.g. horizontal or vertical layout. Then your QFormLayout will automatically resize.  
-Always make sure, that all widgets have a layout! Otherwise, automatic resizing will break with that widget!  
-  
-![](../../../Pasted%20image%2020220715211824.png)  
