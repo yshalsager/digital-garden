@@ -4,7 +4,10 @@ updated: 2022-01-10 00:00
 title: JavaScript Essential Training Study Notes  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # JavaScript Essential Training Study Notes  
   
