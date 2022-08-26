@@ -4,7 +4,9 @@ updated: 2022-06-20 18:25
 title: Lesson 03 - App Navigation  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
 ## Lesson 03: App Navigation  
   
 > Building multiple screens on Android has never been easier with the Navigation library. You'll get to build a fun [trivia app](https://github.com/udacity/andfun-kotlin-android-trivia) using multiple fragments and conditional navigation.  
