@@ -4,7 +4,9 @@ updated: 2022-06-20 18:25
 title: Lesson 06 - App Architecture (Persistence)  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
 ## Lesson 06: App Architecture (Persistence)  
   
 > This lesson is all about data persistence, there are many ways to storing data permanently, but with [Room](https://developer.android.com/topic/libraries/architecture/room) things have become even easier than ever before! We will be building **[Track My Sleep Quality](https://github.com/udacity/andfun-kotlin-sleep-tracker/)** app.  

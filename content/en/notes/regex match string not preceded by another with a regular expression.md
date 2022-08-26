@@ -2,12 +2,14 @@
 updated: 2022-06-20 19:38  
 created: 2022-05-20 00:00  
 title: regex match string not preceded by another with a regular expression  
-  
 aliases:  
   - regex match string not preceded by another with a regular expression  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # regex match string not preceded by another with a regular expression  
   

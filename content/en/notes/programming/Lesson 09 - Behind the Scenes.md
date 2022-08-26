@@ -4,7 +4,9 @@ updated: 2022-06-20 18:25
 title: Lesson 09 - Behind the Scenes  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
 ## Lesson 09: Behind the Scenes  
   
 > Not everything is displayed on the screen. In Android, there's so much happening in the background and you'll get to build your own background services and tasks in this lesson.  

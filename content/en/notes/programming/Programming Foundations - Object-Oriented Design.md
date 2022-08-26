@@ -4,7 +4,9 @@ updated: 2022-06-20 18:25
 title: Programming Foundations - Object-Oriented Design  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
 # Programming Foundations - Object-Oriented Design Study Notes  
   
 ## APIE  

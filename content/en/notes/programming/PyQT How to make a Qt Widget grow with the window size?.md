@@ -6,7 +6,10 @@ aliases:
   - PyQT How to make a Qt Widget grow with the window size?  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة::  
 الحالة:: #ملاحظة_مؤرشفة  

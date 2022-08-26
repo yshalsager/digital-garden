@@ -4,7 +4,9 @@ created: 2021-12-13 07:54
 updated: 2021-12-15 11:55  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
   
 المعرفة:: [JavaScript](JavaScript)  
   

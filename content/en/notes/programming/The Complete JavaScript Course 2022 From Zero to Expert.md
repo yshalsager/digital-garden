@@ -4,7 +4,10 @@ updated: 2022-08-23 16:54
 title: The Complete JavaScript Course 2022 From Zero to Expert  
 share: true  
 website: en/notes/programming  
+tags:  
+  - مساق_مكتمل  
 ---  
+  
   
 التكلفة:: 63  
 الحالة:: #مساق_مكتمل  

@@ -6,7 +6,10 @@ aliases:
   - CSS Sticky navigation with JavaScript  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [CSS](CSS)  
 الحالة:: #ملاحظة_مؤرشفة  

@@ -2,12 +2,14 @@
 updated: 2022-06-20 19:38  
 created: 2022-06-12 00:00  
 title: JavaScript Sets  
-  
 aliases:  
   - JavaScript Sets  
 share: true  
 website: en/notes/programming  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [JavaScript](JavaScript)  
 الحالة:: #ملاحظة_مؤرشفة  

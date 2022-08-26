@@ -4,7 +4,10 @@ updated: 2021-12-28 00:00
 title: youtube-dl download subtitle only  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # youtube-dl download subtitle only  
   

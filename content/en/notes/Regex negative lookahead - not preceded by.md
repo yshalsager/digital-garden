@@ -6,7 +6,10 @@ aliases:
   - Regex negative lookahead - not preceded by  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [](Regex)  
 الحالة:: #ملاحظة_مؤرشفة  

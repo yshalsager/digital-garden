@@ -4,7 +4,9 @@ updated: 2022-06-20 18:25
 title: Lesson 02 - Layouts  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
 ## Lesson 02: Layouts  
   
 > Designing your app's UI is the first step to a great user experience.  

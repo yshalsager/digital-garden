@@ -4,7 +4,10 @@ updated: 2021-07-29 00:00
 title: VPS choosing  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # VPS choosing  
   

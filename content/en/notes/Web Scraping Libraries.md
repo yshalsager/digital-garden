@@ -6,7 +6,10 @@ aliases:
   - Web Scraping Libraries  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)  
 الحالة:: #ملاحظة_مؤرشفة  

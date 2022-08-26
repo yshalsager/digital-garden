@@ -4,7 +4,10 @@ updated: 2021-12-05 00:00
 title: LibreOffice replace with page breaks  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 # LibreOffice replace with page breaks  
   
