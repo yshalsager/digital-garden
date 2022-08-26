@@ -2,12 +2,14 @@
 updated: 2022-06-20 19:38  
 created: 2022-06-11 00:00  
 title: Regex Match Arabic Letters  
-  
 aliases:  
   - Regex Match Arabic Letters  
 share: true  
 website: en/notes  
+tags:  
+  - ملاحظة_مؤرشفة  
 ---  
+  
   
 المعرفة:: [](Regex)  
 الحالة:: #ملاحظة_مؤرشفة  
