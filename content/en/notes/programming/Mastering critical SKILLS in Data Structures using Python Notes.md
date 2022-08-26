@@ -4,7 +4,9 @@ created: 2022-01-06 07:36
 updated: 2022-01-06 08:53  
 share: true  
 website: en/notes/programming  
+tags: []  
 ---  
+  
   
 # Data Structure What and Why  
   
