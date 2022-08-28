@@ -4,9 +4,7 @@ created: 2021-12-16 08:53
 updated: 2021-12-16 10:46  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
   
 <https://www.linkedin.com/learning/learning-java-4/downloading-java-on-your-computer>  
   
