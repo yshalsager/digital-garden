@@ -6,7 +6,10 @@ share: true
 website: ar/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - البرمجة  
+  - Flutter  
 ---  
+  
   
   
 # خطة دراسة Flutter  
