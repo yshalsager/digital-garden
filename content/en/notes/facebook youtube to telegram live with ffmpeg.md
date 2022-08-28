@@ -6,7 +6,9 @@ share: true
 website: en/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Linux  
 ---  
+  
   
   
 # facebook / youtube to telegram live with ffmpeg  
