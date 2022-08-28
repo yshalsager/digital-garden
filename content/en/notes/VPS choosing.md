@@ -5,6 +5,7 @@ title: VPS choosing
 share: true  
 website: en/notes  
 tags:  
+  - ملاحظة_مؤرشفة  
   - Linux  
 ---  
   
