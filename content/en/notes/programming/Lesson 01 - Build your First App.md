@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Lesson 01 - Build your First App  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 # Android with Kotlin Course Notes  
   
 ## Lesson 01: Build your First App  
