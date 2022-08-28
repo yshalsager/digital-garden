@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Unit 1 - Kotlin basics for Android  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 # [Unit 1: Kotlin basics for Android](https://developer.android.com/courses/android-basics-kotlin/unit-1)  
   
 ## [Android Basics: Introduction to Kotlin](https://developer.android.com/courses/pathways/android-basics-kotlin-one)  
