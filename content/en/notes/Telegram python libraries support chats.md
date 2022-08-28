@@ -6,7 +6,9 @@ share: true
 website: en/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Python  
 ---  
+  
   
   
 # Telegram python libraries support chats  
