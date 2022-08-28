@@ -6,7 +6,9 @@ share: true
 website: en/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Linux  
 ---  
+  
   
   
 # youtube-dl download subtitle only  
@@ -24,3 +26,5 @@ youtube-dl --all-subs --skip-download
 youtube-dl --sub-lang LANG --write-auto-sub --skip-download URI  
 youtube-dl --sub-lang LANG --write-auto-sub --sub-format srt --skip-download URL  
 ```  
+  
+`$= console.log(dv.current())`
