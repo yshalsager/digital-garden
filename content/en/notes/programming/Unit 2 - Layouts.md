@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Unit 2 - Layouts  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 # [Unit 2: Layouts](https://developer.android.com/courses/android-basics-kotlin/unit-2)  
   
 ## [Get user input in an app](https://developer.android.com/courses/pathways/android-basics-kotlin-unit-2-pathway-1)  
