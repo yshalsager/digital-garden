@@ -6,7 +6,9 @@ share: true
 website: ar/notes  
 tags:  
   - ملاحظة_نشطة  
+  - البرمجة  
 ---  
+  
   
   
 # خطة دراسة الخوارزمات وهياكل البيانات Data Structures and Algorithms  

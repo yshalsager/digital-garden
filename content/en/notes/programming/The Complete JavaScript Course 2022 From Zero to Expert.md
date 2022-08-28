@@ -6,7 +6,9 @@ share: true
 website: en/notes/programming  
 tags:  
   - مساق_مكتمل  
+  - JavaScript  
 ---  
+  
   
   
 التكلفة:: 63  

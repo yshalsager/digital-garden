@@ -6,7 +6,9 @@ share: true
 website: en/notes/programming  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Python  
 ---  
+  
   
   
 # python - How to import requirements.txt from an existing project using Poetry  

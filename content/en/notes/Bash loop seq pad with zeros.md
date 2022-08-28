@@ -6,7 +6,10 @@ share: true
 website: en/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Bash  
+  - Linux  
 ---  
+  
   
   
 #ملاحظة_مؤرشفة  

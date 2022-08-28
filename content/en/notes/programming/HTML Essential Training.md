@@ -6,7 +6,9 @@ share: true
 website: en/notes/programming  
 tags:  
   - مساق_مكتمل  
+  - البرمجة  
 ---  
+  
   
 # HTML Essential Training  
   

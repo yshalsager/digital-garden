@@ -8,10 +8,12 @@ share: true
 website: en/notes/programming  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Python  
 ---  
   
   
-المعرفة::  
+  
+المعرفة:: [Python](Python)  
 الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: <https://stackoverflow.com/a/6045152>  
   

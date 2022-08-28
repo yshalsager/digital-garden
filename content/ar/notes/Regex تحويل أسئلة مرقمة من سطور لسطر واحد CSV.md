@@ -8,7 +8,9 @@ share: true
 website: ar/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Regex  
 ---  
+  
   
   
 المعرفة:: [](Regex)  

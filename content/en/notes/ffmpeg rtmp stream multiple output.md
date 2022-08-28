@@ -8,12 +8,13 @@ share: true
 website: en/notes  
 tags:  
   - ملاحظة_مؤرشفة  
+  - Linux  
 ---  
   
   
-المعرفة::   
+  
 الحالة:: #ملاحظة_مؤرشفة  
-المراجع:: [Linux](Linux)  
+المعرفة:: [Linux](Linux)  
   
 ---  
   

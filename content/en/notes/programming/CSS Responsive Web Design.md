@@ -4,9 +4,7 @@ created: 2021-12-10 13:43
 updated: 2021-12-10 14:50  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
   
 <https://alistapart.com/article/responsive-web-design/>  
   

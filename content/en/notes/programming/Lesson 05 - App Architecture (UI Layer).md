@@ -4,7 +4,8 @@ updated: 2022-06-20 18:25
 title: Lesson 05 - App Architecture (UI Layer)  
 share: true  
 website: en/notes/programming  
-tags: []  
+tags:  
+  - "` is used for Reflection in kotlin:"  
 ---  
   
 ## Lesson 05: App Architecture (UI Layer)  

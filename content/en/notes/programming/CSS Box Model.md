@@ -4,9 +4,7 @@ created: 2021-12-09 09:54
 updated: 2021-12-09 10:03  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
   
 # The Box Model  
   
