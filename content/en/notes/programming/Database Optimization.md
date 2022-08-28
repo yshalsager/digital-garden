@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Database Optimization  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 # Database Optimization  
   
 ```toc  
