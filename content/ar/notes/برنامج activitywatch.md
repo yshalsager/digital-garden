@@ -1,7 +1,7 @@
 ---  
 created: 2022-08-09 19:18  
 updated: 2022-08-28 12:48  
-title: null  
+title: برنامج activitywatch  
 share: true  
 website: ar/notes  
 tags:  
