@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Lesson 10 - Designing for Everyone  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 ## Lesson 10: Designing for Everyone  
   
 > Coming up with a good design for an app is always hard, but creating a great design is more than just colors and layouts. Let's build an app that is designed for everyone, everywhere!  
