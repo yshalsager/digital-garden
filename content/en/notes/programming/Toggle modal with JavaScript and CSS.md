@@ -7,8 +7,10 @@ aliases:
 share: true  
 website: en/notes/programming  
 tags:  
-  - ملاحظة_مؤرشفة  
+  - JavaScript  
+  - CSS  
 ---  
+  
   
   
 المعرفة:: [JavaScript](JavaScript), [CSS](CSS)  
