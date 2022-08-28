@@ -176,7 +176,7 @@ val viewModel: MyViewModel by navGraphViewModels(R.id.my_graph)
   
 **Note 2: `::` Usage in Kotlin**:  
   
-`::` is used for Reflection in kotlin:  
+- `::` is used for Reflection in kotlin:  
   
 1. Class Reference `val myClass = MyClass::class`  
 2. Function Reference `list::isEmpty()`  
