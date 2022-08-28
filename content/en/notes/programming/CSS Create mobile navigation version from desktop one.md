@@ -8,7 +8,10 @@ share: true
 website: en/notes/programming  
 tags:  
   - ملاحظة_مؤرشفة  
+  - CSS  
+  - JavaScript  
 ---  
+  
   
   
 المعرفة:: [CSS](CSS), [JavaScript](JavaScript)  
