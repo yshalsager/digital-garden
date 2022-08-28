@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Lesson 08 - Connect to the Internet  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 ## Lesson 08: Connect to the Internet  
   
 > Need some live data in your app? In this lesson you'll use Retrofit to communicate with any API service out there. You'll also use Glide to display images from the web for [Mars Real Estate](https://github.com/udacity/andfun-kotlin-mars-real-estate) app!  
