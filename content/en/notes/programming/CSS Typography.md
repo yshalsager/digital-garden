@@ -4,9 +4,7 @@ created: 2021-12-09 10:39
 updated: 2021-12-09 11:14  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
   
 ## Categories of Typefaces  
   
