@@ -4,9 +4,7 @@ updated: 2022-06-20 18:25
 title: Lesson 04 - Activity & Fragment Lifecycle  
 share: true  
 website: en/notes/programming  
-tags: []  
 ---  
-  
 ## Lesson 04: Activity & Fragment Lifecycle  
   
 > Understanding the concept of Lifecycles for both activities and fragments is what makes a great Android developer! Have a treat with this delicious "[Dessert Pusher](https://github.com/udacity/andfun-kotlin-dessert-pusher)" app.  
