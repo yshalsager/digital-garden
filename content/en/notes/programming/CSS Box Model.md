@@ -13,7 +13,7 @@ website: en/notes/programming
 - Border box  
 - Margin box  
   
-![](../../../Pasted%20image%2020211209100324.png)  
+![Pasted image 20211209100324.png](Pasted%20image%2020211209100324.png)  
   
 **Example:**  
   
