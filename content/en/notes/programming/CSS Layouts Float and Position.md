@@ -144,7 +144,7 @@ CSS snippet added to the parent of floated elements.
   
 ### The Box Model Fix  
   
-- This [](CSS%20Layouts%20Float%20and%20Position#box-sizing%20border-box) is often referred to as the box model fix.  
+- This [CSS Layouts Float and Position#box-sizing border-box](CSS%20Layouts%20Float%20and%20Position#box-sizing%20border-box.md) is often referred to as the box model fix.  
 - To use this fix, add this CSS code snippet to all of your projects.  
 - More Resources: [1](https://www.paulirish.com/2012/box-sizing-border-box-ftw/), [2](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).  
   
