@@ -13,9 +13,9 @@ tags:
   
   
   
-المعرفة:: [](Regex)  
+المعرفة:: [Regex](Regex.md)  
 الحالة:: #ملاحظة_مؤرشفة  
-المراجع:: [Regex Match Arabic Letters](../en/Regex%20Match%20Arabic%20Letters)  
+المراجع:: [Regex Match Arabic Letters](../../en/notes/Regex%20Match%20Arabic%20Letters.md)  
   
 ---  
   
