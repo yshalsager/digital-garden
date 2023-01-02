@@ -26,12 +26,12 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/normalizat
 - This means that each field in each table has only one value in it, and that there are no columns representing repeated kinds of data for each row.  
 - First normal form is often extended to include the idea that there aren't duplicate rows in a table. This also suggests that the order of rows and columns is not important to the data.  
   
-![](../../../Pasted%20image%2020211205131903.png)  
-![](../../../Pasted%20image%2020211205132001.png)  
+![Pasted image 20211205131903.png](Pasted%20image%2020211205131903.png)  
+![Pasted image 20211205132001.png](Pasted%20image%2020211205132001.png)  
   
 - To resolve this problem, we'd remove the repeating groups, either from a list in one cell or from multiple columns, and create another table that satisfies first normal form to hold the values. Then, we'd link the tables with a relationship between their keys.  
   
-![](../../../Pasted%20image%2020211205132147.png)  
+![Pasted image 20211205132147.png](Pasted%20image%2020211205132147.png)  
   
 - Violations of first normal form are usually pretty easy to spot early on in the design process. Whenever you find yourself putting multiple values in a cell or creating columns that end with numbers like favorite dish one, favorite dish two and so on, that's a big red flag that indicates you'll need to change the design.  
 - If you find that you're relying on the sequence of rows or columns, that's another red flag. If the sequence in which records were entered is important, you'll want to use an auto-incrementing unique value, or a time-stamp, to indicate that instead. When we query data, we might not always get it back in the order in which it appears in a visual representation of the table.  
@@ -44,8 +44,8 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/normalizat
 - The values must describe something about that row that we can't determine from just the part of a key.   
 - This problem comes up in the context of composite keys.  
   
-![](../../../Pasted%20image%2020211205132828.png)  
-![](../../../Pasted%20image%2020211205132852.png)  
+![Pasted image 20211205132828.png](Pasted%20image%2020211205132828.png)  
+![Pasted image 20211205132852.png](Pasted%20image%2020211205132852.png)  
   
 - In order to make this table comply with second normal form, we need to create a new table with a key for the event and a corresponding location. Now the Events table has values that are dependent on the full key, and the new EventsLocations table reflects the fact that each event is held in just one place. The location is now dependent on the event name. Just by knowing the name of the event, we can tell where it's held.  
   
@@ -56,7 +56,7 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/normalizat
 - If a value you're storing can be derived from some kind of rule from another value in the table, that's a violation of third normal form. But if the value can't be derived from another field, if it describes something unique to that row, it's not a violation.  
 - In order to put a database into Third Normal Form, it must also be in First and Second Normal Form. Normalization is a progressive process, and higher forms depend on the database being compliant with lower forms as well.  
   
-![](../../../Pasted%20image%2020211205140115.png)  
+![Pasted image 20211205140115.png](Pasted%20image%2020211205140115.png)  
   
 ## Denormalization  
   
@@ -69,7 +69,7 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/normalizat
 -  In our restaurant database, it's not likely we'll run into speed problems any time soon, but as an example of denormalization let's take a look at the Orders table.  
 -  For each order we can determine the number of items included and a total price for those items. By using the OrderID we can get the associated items in the OrdersDishes table, count them up, and pull information from the Dishes table to get the price of each item and sum those up as well.  
   
-![](../../../Pasted%20image%2020211205140423.png)  
+![Pasted image 20211205140423.png](Pasted%20image%2020211205140423.png)  
   
 -  We wouldn't usually store this information on the Orders table because if we did, we'd be storing derived information in a place where it could be edited with no consistency checks.  
 -  What if an order had three items and cost $26.98 and then someone edited the quantity? Looking back at this record it wouldn't reflect what was really ordered, and the data would be inconsistent, but in problems like this we need to balance when we're making a decision to denormalize.  
