@@ -22,23 +22,23 @@ website: en/notes/programming
   
 ### Web Design Ingredients  
   
-1. [](#Typography)  
-2. [](#Colors)  
-3. [](#Images_Illustrations)  
-4. [](#Icons)  
-5. [](#Shadows)  
-6. [](#Border-radius)  
-7. [](#White%20Space)  
-8. [](#Visual%20Hierarchy)  
-9. [](#User%20Experience)  
-10. [](#Components_Layout)  
+1. [#Typography](#Typography.md)  
+2. [#Colors](#Colors.md)  
+3. [#Images_Illustrations](#Images_Illustrations.md)  
+4. [#Icons](#Icons.md)  
+5. [#Shadows](#Shadows.md)  
+6. [#Border-radius](#Border-radius.md)  
+7. [#White Space](#White%20Space.md)  
+8. [#Visual Hierarchy](#Visual%20Hierarchy.md)  
+9. [#User Experience](#User%20Experience.md)  
+10. [#Components_Layout](#Components_Layout.md)  
   
 ### Typography  
   
 #### Serif vs Sans-serif  
   
-![](CSS%20Typography#%5Edf4a8f)  
-![](CSS%20Typography#%5Ef8e4fb)  
+![CSS Typography > ^df4a8f](CSS%20Typography)  
+![CSS Typography > ^f8e4fb](CSS%20Typography)  
   
 #### Use Good Typefaces  
   
@@ -58,7 +58,7 @@ website: en/notes/programming
 7. For **headlines**, you can go really big 50px+) and bold 600, depending on **personality**.  
 8. For any text, don’t use a font weight under 400 (regular).  
   
-![](../../../Pasted%20image%2020220522155721.png)  
+![Pasted image 20220522155721.png](Pasted%20image%2020220522155721.png)  
   
 #### Create a Good Reading Experience  
   
@@ -388,10 +388,10 @@ Next section
 6. Feature box  
 7. Preview and profile cards  
 8. Accordion  
-   - [](01-accordion.html)  
+   - [01-accordion.html](01-accordion.html)  
 9. Tabs  
 10. Carousel  
-    - [](02-carousel.html)  
+    - [02-carousel.html](02-carousel.html)  
 11. Customer testimonials  
 12. Customer logos  
 13. Featured-in logos  
@@ -424,7 +424,7 @@ Next section
 7. Multi-column/magazine  
 8. Asymmetry/Experimental  
   
-### [CSS Vertical Centering With Absolute Position and Transform](CSS%20Vertical%20Centering%20With%20Absolute%20Position%20and%20Transform)  
+### [CSS Vertical Centering With Absolute Position and Transform](./CSS%20Vertical%20Centering%20With%20Absolute%20Position%20and%20Transform.md)  
   
 ## Section 7: Omnifood Project: Setup and Desktop Version  
   
@@ -543,17 +543,17 @@ html {
   
 ## Tricks  
   
-- [](CSS%20Global%20Reset)  
-- [](CSS%20Reusable%20Grid)  
-- [](CSS%20Make%20Image%20Color%20Grey)  
-- [](CSS%20Add%20border%20inside%20element)  
-- [](CSS%20Vertical%20Centering%20With%20Absolute%20Position%20and%20Transform)  
-- [](CSS%20Change%20rem%20unit%20default%20value)  
-- [](CSS%20Focus%20better%20handling)  
-- [](CSS%20Simple%20link%20hover%20animation)  
-- [](CSS%20Hide%20Element)  
-- [](CSS%20Create%20mobile%20navigation%20version%20from%20desktop%20one)  
-- [](CSS%20Smooth%20scrolling)  
-- [](CSS%20Sticky%20navigation%20with%20JavaScript)  
+- [CSS Global Reset](./CSS%20Global%20Reset.md)  
+- [CSS Reusable Grid](./CSS%20Reusable%20Grid.md)  
+- [CSS Make Image Color Grey](./CSS%20Make%20Image%20Color%20Grey.md)  
+- [CSS Add border inside element](./CSS%20Add%20border%20inside%20element.md)  
+- [CSS Vertical Centering With Absolute Position and Transform](./CSS%20Vertical%20Centering%20With%20Absolute%20Position%20and%20Transform.md)  
+- [CSS Change rem unit default value](./CSS%20Change%20rem%20unit%20default%20value.md)  
+- [CSS Focus better handling](./CSS%20Focus%20better%20handling.md)  
+- [CSS Simple link hover animation](./CSS%20Simple%20link%20hover%20animation.md)  
+- [CSS Hide Element](./CSS%20Hide%20Element.md)  
+- [CSS Create mobile navigation version from desktop one](./CSS%20Create%20mobile%20navigation%20version%20from%20desktop%20one.md)  
+- [CSS Smooth scrolling](./CSS%20Smooth%20scrolling.md)  
+- [CSS Sticky navigation with JavaScript](./CSS%20Sticky%20navigation%20with%20JavaScript.md)  
   
 CSS Transition: `translation: background-color 0.3s;`  
