@@ -13,7 +13,7 @@ tags:
   
   
   
-المعرفة:: [](Regex)  
+المعرفة:: [Regex](Regex.md)  
 الحالة:: #ملاحظة_مؤرشفة  
 المراجع:: <https://stackoverflow.com/a/7317116>  
   
