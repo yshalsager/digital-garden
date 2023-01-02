@@ -16,7 +16,7 @@ tags:
 # regex match string not preceded by another with a regular expression  
   
 الحالة:: #ملاحظة_مؤرشفة  
-المعرفة:: [](Regex)  
+المعرفة:: [Regex](Regex.md)  
   
 **All B's not preceded by a A by AB.**  
   
