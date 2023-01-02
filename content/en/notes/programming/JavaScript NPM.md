@@ -1,7 +1,7 @@
 ---  
 title: JavaScript NPM  
 created: 2022-08-16 10:19  
-updated: 2022-08-16 11:50  
+updated: 2022-11-08 08:49  
 aliases:  
   - JavaScript NPM  
 share: true  
@@ -21,8 +21,8 @@ tags:
   
 <https://docs.npmjs.com/>  
   
-- `npm init`: initializing a new project.  
+- `npm init`: initializing a new project. (`-y` can be used to use default values directly and then edit `package.json` manually)  
 - `npm install package`: install a package. Or `npm i package`. A version can be specified using `@x.y.z` after package name.  
 - `npm install`: install all packages from `package.json`. Or `npm i`  
-- `npm install package --save-dev`: install a package as development dependency.  
+- `npm install package --save-dev` or `npm install package -D`: install a package as development dependency.  
 - `npm run X`: run a defined command in npm scripts section of `package.json`.  

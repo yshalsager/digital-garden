@@ -18,7 +18,7 @@ tags:
 المدة:: 2h45m  
 المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)  
 المنشيء:: Jen Simmons  
-المهام:: [](HTML%20Essential%20Training%201), [](HTML%20Essential%20Training%202)  
+المهام:: [HTML Essential Training 1](HTML%20Essential%20Training%201.md), [HTML Essential Training 2](HTML%20Essential%20Training%202.md)  
 الوصف:: Hypertext Markup Language (HTML) is the foundation of website and web application development. It allows you to ensure that your content is understood by both segments of your audience: the people who watch, read, or listen to your content, and the computers that display it. In this course, learn how to craft excellent HTML with the pieces that HTML itself has to offer. Instructor Jen Simmons highlights all of the fundamental concepts you need to use HTML thoughtfully. She focuses on semantic markup: tagging content as what it is, and not just for formatting, convention, or convenience. This has far-reaching impact for those who consume the web differently; it ensures that when a screen reader or a system (like a search engine) consumes a page, it knows exactly what it contains and how to categorize that information.  
 اﻷركان:: [التعلم](%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85)  
 اﻷهداف:: [LinkedIn Software Developer Path](LinkedIn%20Software%20Developer%20Path)  

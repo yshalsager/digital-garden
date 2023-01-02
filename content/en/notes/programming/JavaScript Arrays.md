@@ -1,5 +1,5 @@
 ---  
-updated: 2022-06-20 19:38  
+updated: 2022-11-06 11:30  
 created: 2022-06-14 00:00  
 title: JavaScript Arrays  
 aliases:  
@@ -64,7 +64,7 @@ const map = new Map([
   [2, 4],  
   [4, 8],  
 ]);  
-Array.from(map); // [](1,%202)  
+Array.from(map); // [1, 2](1,%202.md)  
   
 // Array from a NodeList  
 // Create an array based on a property of DOM Elements  
@@ -101,7 +101,7 @@ arr.splice(index, 1);
   
 ### Slice  
   
-Extract a part of an array **without changing** the original array. Similar to [slice in strings](,%20JavaScript%20Strings#Removing%20Parts%20of%20String%20via%20slice).  
+Extract a part of an array **without changing** the original array. Similar to [slice in strings](,%20JavaScript%20Strings#Removing%20Parts%20of%20String%20via%20slice.md).  
   
 ```js  
 let arr = ["a", "b", "c", "d", "e"];  
@@ -191,7 +191,7 @@ console.log(arr.at(-1));
   
 ### Map  
   
-- Similar to the [forEach](,%20JavaScript%20Loops%20and%20Iteration#forEach) method, but returns **a new array** containing the results of **applying an operation** **on all** original array **elements**.  
+- Similar to the [forEach](,%20JavaScript%20Loops%20and%20Iteration#forEach.md) method, but returns **a new array** containing the results of **applying an operation** **on all** original array **elements**.  
   
 ```js  
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];  
@@ -274,7 +274,7 @@ console.log(totalDepositsUSD); // 5522.0000000000001
 ## Find  
   
 - Can be used to retrieve **one array's element** based on a certain condition.  
-- Unlike `filter`, it won't **return** a new array, but **the first element** that matches the finding condition.  
+- Unlike `filter`, it won't **return** a new array, but **the first element** that matches the finding condition. Because of this, it can be more efficient in situations when something needs to be done in case of a match.  
   
 ```js  
 const firstWithdrawal = movements.find(mov => mov < 0);  
@@ -326,7 +326,7 @@ console.log(movements.filter(deposit));
 ```js  
 const arr1 = [0, 1, 2, [3, 4]];  
 console.log(arr1.flat()); // [0, 1, 2, 3, 4]  
-const arr2 = [0, 1, 2, [](3,%204)]];  
+const arr2 = [0, 1, 2, [3, 4](3,%204.md)]];  
 console.log(arr2.flat(2)); // [0, 1, 2, [3, 4]] - depth 2  
 const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];  
 arr4.flat(Infinity); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  

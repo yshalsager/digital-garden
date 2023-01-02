@@ -25,7 +25,7 @@ website: en/notes/programming
 - flex container: the parent element  
 - flex items: the child elements  
   
-![](../../../Pasted%20image%2020211210082008.png)  
+![Pasted image 20211210082008.png](Pasted%20image%2020211210082008.png)  
   
 ### `flex-direction`  
   
@@ -97,7 +97,7 @@ flex: 0 1 100px;
 ```  
   
 If you wanted the items to be sized differently, then flex must be applied to the individual flex items.  
-![](../../../Pasted%20image%2020211210083240.png)  
+![Pasted image 20211210083240.png](Pasted%20image%2020211210083240.png)  
   
 ```html  
 <div class="flex-container">  
