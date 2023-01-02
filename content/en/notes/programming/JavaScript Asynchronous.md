@@ -272,8 +272,8 @@ const getCountryData = function (country) {
   
 Previously, we learnt that:  
   
-- A [JavaScript Runtime](,%20JavaScript%20Engine#JavaScript%20Runtime) is basically a container which includes all the different pieces that are necessary to execute JavaScript code.  
-  - The heart of every JavaScript runtime is the [engine](JavaScript%20Engine), where **code** is actually **executed** and where **objects are stored in memory**.  
+- A [JavaScript Runtime](,%20JavaScript%20Engine#JavaScript%20Runtime.md) is basically a container which includes all the different pieces that are necessary to execute JavaScript code.  
+  - The heart of every JavaScript runtime is the [engine](./JavaScript%20Engine.md), where **code** is actually **executed** and where **objects are stored in memory**.  
     - These two things happen in the **call stack** and in the **heap**.  
   - The Runtime also includes **Web APIs** environment (DOM, timers, fetch, geolocation, etc.).  
   - Another component of the runtime is the **Callback Queue**, a data structure that holds all ready to be executed callback functions that are attached to some event that has occurred.  
@@ -282,7 +282,7 @@ Previously, we learnt that:
   
 Remember that one of JavaScript features is the non-blocking event loop:  
   
-![](,%20JavaScript%20in%20depth#9%20Non-blocking%20event%20loop)  
+![, JavaScript in depth > 9 Non-blocking event loop](./JavaScript%20in%20depths#9%20Non-blocking%20event%20loop.md)  
   
 - JavaScript has a non blocking concurrency model.  
 - A concurrency model is simply how a language handles multiple things happening at the same time.  
@@ -298,6 +298,7 @@ How can **asynchronous** code be executed in a **non-blocking way**, if there is
   - Once the image has finished loading and the load event is emitted, the callback for this event is put into **callback queue** (an ordered list of all the callback functions that are in line to be executed).  
   
 - Example 2: AJAX call using `fetch` will also happen in the web APIs environment. Using the `then()` method on the promise returned by `fetch` will also **register a callback** in the web API environment so that we can react to the future resolved value of the promise.  
+  
   
 ## The Event Loop  
   
@@ -415,11 +416,11 @@ wait(1)
   
 - In the previous example, having a nice sequence of asynchronous behavior is way better than callback hell example.  
   
-![](#%5EcallbackHellExample)  
+![^callbackHellExample](JavaScript%20Asynchronous)  
   
 #### Example 2  
   
-Remember that `navigator.geolocation.getCurrentPosition()` ![](,%20JavaScript%20Geolocation%20API#%5EgetCurrentPositionParameters) So we don't need to pass `resolve` and `reject` manually.  
+Remember that `navigator.geolocation.getCurrentPosition()` ![, JavaScript Geolocation API > ^getCurrentPositionParameters](JavaScript%20Geolocation%20API) So we don't need to pass `resolve` and `reject` manually.  
   
 ```js  
 // Promisifying the Geolocation API  
@@ -596,7 +597,7 @@ whereAmI()
   .finally(() => console.log('3: Finished getting location'));  
 ```  
   
-- [IIFE's](,%20JavaScript%20Immediately%20Invoked%20Function%20Expressions%20(IIFE)) can be utilized to use `await` and receive data from other async functions instead of having to reply on Promise's `then()`, `catch()` and `finally()`.  
+- [IIFE's](JavaScript%20Immediately%20Invoked%20Function%20Expressions%20IIFE) can be utilized to use `await` and receive data from other async functions instead of having to reply on Promise's `then()`, `catch()` and `finally()`.  
   
 ```js  
 async function () {  
@@ -711,7 +712,7 @@ Promise.any([
   
 ## Top-Level await  
   
-- Starting from ES2022 version, we can now use the `await` keyword outside of `async` functions, at least in [modules](JavaScript%20Modules) (`<script type="module">`).  
+- Starting from ES2022 version, we can now use the `await` keyword outside of `async` functions, at least in [modules](./JavaScript%20Modules.md) (`<script type="module">`).  
   
 ```js  
 // Top-Level Await (ES2022)  
