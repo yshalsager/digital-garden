@@ -1,6 +1,6 @@
 ---  
-created: 2021-12-22 00:00  
-updated: 2022-02-23 00:00  
+created: 2022-06-03 20:33:15  
+updated: 2023-02-15 18:27:08  
 title: Public Personal Knowledge Base  
 share: true  
 website: en/notes  
@@ -9,11 +9,17 @@ tags:
 ---  
   
   
-# Public Personal Knowledge Base  
+## Public Personal Knowledge Base  
   
-الحالة:: #ملاحظة_نشطة  
+الحالة:: #ملاحظة/نشطة  
   
-[](%D9%85%D8%B5%D8%A7%D8%AF%D8%B1%20%D9%84%D8%AA%D8%B9%D9%84%D9%85%20Obsidian)  
+[مصادر لتعلم Obsidian](%D9%85%D8%B5%D8%A7%D8%AF%D8%B1%20%D9%84%D8%AA%D8%B9%D9%84%D9%85%20Obsidian.md)  
+  
+new template <https://github.com/oleeskild/digitalgarden>  
+  
+<https://github.com/ObsidianPublisher/obsidian-github-publisher> vs <https://github.com/oleeskild/Obsidian-Digital-Garden>  
+  
+---  
   
 Export obsidian to standard md  
   
@@ -27,6 +33,6 @@ Hugo page footer
   
 [hugo-theme-modern/page_metadata.html at main · zoni/hugo-theme-modern](https://github.com/zoni/hugo-theme-modern/blob/main/layouts/partials/page_metadata.html)  
   
-[🪴 Quartz 3.1](https://quartz.jzhao.xyz/)  
-https://github.com/ObsidianPublisher?type=source  
-https://github.com/oleeskild/obsidian-digital-garden  
+[🪴 Quartz 3.1](https://quartz.jzhao.xyz/)    
+<https://github.com/ObsidianPublisher?type=source>    
+<https://github.com/oleeskild/obsidian-digital-garden>  
