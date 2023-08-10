@@ -13,12 +13,12 @@ tags:
   
   
   
-الحالة:: #ملاحظة_مؤرشفة  
-المعرفة:: [Linux](Linux)  
+الحالة:: #ملاحظة/مؤرشفة  
+المعرفة:: [Linux](Linux.md)  
   
 ---  
   
-- [ ] Stream must be mapped before using tee muxer.  
+- Stream must be mapped before using tee muxer.  
   
 ```bash  
 ffmpeg -stream_loop -1 -i https://qurango.net/radio/tarateel -map 0:a -c:a aac -f tee "[f=flv:onfail=ignore]rtmps://server1|[f=flv:onfail=ignore]rtmps://server2"  
