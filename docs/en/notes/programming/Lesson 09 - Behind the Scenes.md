@@ -1,6 +1,6 @@
 ---  
-created: 2022-05-22 14:38  
-updated: 2022-06-20 18:25  
+created: 2022-05-22 14:38:00  
+updated: 2022-06-20 18:25:00  
 title: Lesson 09 - Behind the Scenes  
 share: true  
 website: en/notes/programming  
@@ -107,7 +107,6 @@ That's really all there is to a cache, a way to save data and a way to load it.
 ***  
   
 ### Building a Room  
-  
   
 #### Explore the code  
   
@@ -319,7 +318,7 @@ The _repository pattern_ is a design pattern that isolates data sources from the
   
 A _repository_ mediates between data sources (such as persistent models, web services, and caches) and the rest of the app. The diagram below shows how app components such as activities that use `LiveData` might interact with data sources by way of a repository.  
   
-![Repositories.png](../../../Repositories.png)  
+![Repositories.png](../../../assets/img/Repositories.png)  
   
 To implement a repository, you use a _repository class_, such as the `VideosRepository` class that you create in the next task. The repository class isolates the data sources from the rest of the app and provides a clean API for data access to the rest of the app. Using a repository class is a recommended best practice for code separation and architecture.  
   
@@ -549,10 +548,12 @@ While `WorkManager` runs background work, it takes care of compatibility issues 
 `WorkManager` also lets you set criteria on when the background task runs. For example, you might want the task to run only when the battery status, network status, or charge state meet certain criteria. You learn how to set constraints later in this lesson.  
   
 **Note:**  
+  
 * `WorkManager` is not intended for in-process background work that can be terminated safely if the app process is killed.  
 * `WorkManager` is not intended for tasks that require immediate execution.  
   
 **How can you avoid using too much battery in the background?**  
+  
 * Use WorkManager.  
 * Specify as many reasonable constraints as possible for each job, such as device idle, charging, and connected to wifi.  
 * Be sparing about scheduling background work - if the work can wait until next launch then do it when the app is in the foreground.  
@@ -579,7 +580,7 @@ Before you add code to the project, familiarize yourself with the following clas
 #### Add the `WorkManager` dependency  
   
 1. Open the `build.gradle (Module:app)` file and add the `WorkManager` dependency to the project.    
-        
+  
     If you use the [latest version](https://developer.android.com/jetpack/androidx/releases/work) of the library, the solution app should compile as expected. If it doesn't, try resolving the issue, or revert to the library version shown below.  
   
 ```groovy  
@@ -782,7 +783,7 @@ override fun onCreate() {
   
 8. Open the **Logcat** pane at the bottom of the Android Studio window. Filter on `RefreshDataWorker`.  
 9. Run the app. The `WorkManager` schedules your recurring work immediately.    
-        
+  
     In the **Logcat** pane, notice the log statements that show that the work request is scheduled, then runs successfully.  
   
 ```  
@@ -805,7 +806,7 @@ val repeatingRequest = PeriodicWorkRequestBuilder<RefreshDataWorker>(15, TimeUni
   
 2. Open the **Logcat** pane in Android Studio and filter on `RefreshDataWorker`. To clear the previous logs, click the **Clear logcat** icon ![](https://developer.android.com/codelabs/kotlin-android-training-work-manager/img/73fa94afd290964.png) .  
 3. Run the app, and the `WorkManager` schedules your recurring work immediately. In the **Logcat** pane, notice the logs—the work request is run once every 15 minutes. Wait 15 minutes to see another set of work request logs. You can leave the app running or close it; the work manager should still run.    
-        
+  
     Notice that the interval is sometimes less than 15 minutes, and sometimes more than 15 minutes. (The exact timing is subject to OS battery optimizations.)  
   
 ```  
@@ -1008,7 +1009,6 @@ Great Job! You implemented and scheduled a battery-friendly work request for the
 * To add offline-support to an app, add a local database using `Room`. Implement a repository to manage and access the `Room` database. In the `ViewModel`, fetch and display the data directly from the repository instead of fetching the data from the network.  
 * Use a database refresh strategy to insert and update the data in the local database. In a database refresh, the local database is updated or refreshed to keep it in sync with data from the network.  
 * To update your app's UI data automatically when the data in the database changes, use observable queries with a return value of type [`LiveData`](https://developer.android.com/reference/androidx/lifecycle/LiveData.html) in the DAO. When the `Room` database is updated, `Room` runs the query in background to update the associated `LiveData`.  
-  
   
 #### WorkManager  
   

@@ -1,6 +1,6 @@
 ---  
-created: 2022-05-22 14:38  
-updated: 2022-06-20 18:25  
+created: 2022-05-22 14:38:00  
+updated: 2022-06-20 18:25:00  
 title: Lesson 06 - App Architecture (Persistence)  
 share: true  
 website: en/notes/programming  
@@ -40,6 +40,7 @@ implementation "androidx.room:room-ktx:$version_room"
 ***  
   
 ### SQL  
+  
 This course assumes that you are familiar with databases in general, SQL databases in particular, and the SQL language used to interact with them.  
 This [page](https://developer.android.com/courses/extras/sql-primer) is a refresher and quick reference about SQLite.  
   
@@ -50,18 +51,20 @@ This [page](https://developer.android.com/courses/extras/sql-primer) is a refres
 In Android, data is represented in data classes, and the data is accessed and modified using function calls. However, in the database world, you need _entities_ and _queries_.  
   
 **Entity**:  
-* An _entity_ represents an object or concept, and its properties, to store in the database. An entity class defines a table, and each instance of that class represents a row in the table.  
-* Each property defines a column. In your app, the entity is going to hold information about a night of sleep.  
+  
+- An _entity_ represents an object or concept, and its properties, to store in the database. An entity class defines a table, and each instance of that class represents a row in the table.  
+- Each property defines a column. In your app, the entity is going to hold information about a night of sleep.  
   
 **Query**:  
-* A _query_ is a request for data or information from a database table or combination of tables, or a request to perform an action on the data.  
-* Common queries are for getting, inserting, and updating entities. For example, you could query for all the sleep nights on record, sorted by start time.  
+  
+- A _query_ is a request for data or information from a database table or combination of tables, or a request to perform an action on the data.  
+- Common queries are for getting, inserting, and updating entities. For example, you could query for all the sleep nights on record, sorted by start time.  
   
 `Room` does all the hard work for you to get from Kotlin data classes to entities that can be stored in SQLite tables, and from function declarations to SQL queries.  
   
 You must define each **[entity](https://developer.android.com/training/data-storage/room/defining-data.html) as an annotated data class,** and the **interactions as an annotated interface,** a _data access object (DAO)_. `Room` uses these [annotated](https://developer.android.com/reference/android/arch/persistence/room/package-summary#annotations) classes to create tables in the database, and queries that act on the database.  
   
-![DAO.png](../../../DAO.png)  
+![DAO.png](../../../assets/img/DAO.png)  
   
 1. In the `database` package, find and open the `SleepNight.kt` file.  
 2. Create the `SleepNight` data class with parameters for an ID, start time and end time in milliseconds, and a numerical sleep quality rating:  
@@ -119,22 +122,25 @@ data class SleepNight(
 ***  
   
 ### Data Access Object (DAO)  
+  
 - When you use a `Room` database, you query the database by defining and calling Kotlin functions in your code. These Kotlin functions map to SQL queries. You define those mappings in a DAO using annotations, and `Room` creates the necessary code.  
 - Think of a DAO as defining a custom interface for accessing your database.  
 - For common database operations, the `Room` library provides convenience annotations, such as `@Insert`, `@Delete`, and `@Update`. For everything else, there is the `@Query` annotation. You can write any query that's supported by SQLite.  
 - As an added bonus, as you create your queries in Android Studio, the compiler checks your SQL queries for syntax errors.  
   
 For the sleep-tracker database of sleep nights, you need to be able to do the following:  
-* **Insert** new nights.  
-* **Update** an existing night to update an end time and a quality rating.  
-* **Get** a specific night based on its key.  
-* **Get all nights**, so you can display them.  
-* **Get the most recent night.** when we don't have a key that matches.  
-* **Delete** all entries in the database.  
+  
+- **Insert** new nights.  
+- **Update** an existing night to update an end time and a quality rating.  
+- **Get** a specific night based on its key.  
+- **Get all nights**, so you can display them.  
+- **Get the most recent night.** when we don't have a key that matches.  
+- **Delete** all entries in the database.  
   
 ***  
   
 ### Creating the SleepDatabase DAO  
+  
 1. In the `database` package, open `SleepDatabaseDao.kt`. Create an interface `SleepDatabaseDao` and annotate it with `@Dao`.  
   
 ```kotlin  
@@ -173,7 +179,7 @@ fun clear()
 *Note*: The `@Delete` annotation deletes one item, and you could use `@Delete` and supply a list of nights to delete. The drawback is that you need to fetch or know what's in the table. The `@Delete` annotation is great for deleting specific entries, but not efficient for clearing all entries from a table.  
   
 6. Add a `@Query` with a `getTonight()` function. Make the `SleepNight` returned by `getTonight()` nullable, so that the function can handle the case where the table is empty. (The table is empty at the beginning, and after the data is cleared.)  
-    * You get tonight by writing a SQLite query that returns the first element of a list of results ordered by nightId in descending order. Use `LIMIT 1` to return only one element.  
+    - You get tonight by writing a SQLite query that returns the first element of a list of results ordered by nightId in descending order. Use `LIMIT 1` to return only one element.  
   
 ```kotlin  
 @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")  
@@ -181,8 +187,8 @@ fun getTonight(): SleepNight?
 ```  
   
 7. Add a `@Query` with a `getAllNights()` function:  
-    * The SQLite query should return all columns from the `daily_sleep_quality_table`, ordered in descending order. Let `getAllNights()` return a list of `SleepNight` as `LiveData`. `Room` keeps this `LiveData` updated for us, and we don't have to specify an observer for it.  
-    * You may need to import `LiveData` from `androidx.lifecycle.LiveData`.  
+    - The SQLite query should return all columns from the `daily_sleep_quality_table`, ordered in descending order. Let `getAllNights()` return a list of `SleepNight` as `LiveData`. `Room` keeps this `LiveData` updated for us, and we don't have to specify an observer for it.  
+    - You may need to import `LiveData` from `androidx.lifecycle.LiveData`.  
   
 ```kotlin  
 @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")  
@@ -190,20 +196,22 @@ fun getAllNights(): LiveData<List<SleepNight>>
 ```  
   
 ##### Suspend functions and LiveData in DAO  
+  
 Note that functions that return `LiveData` in the DAO can't use suspend keyword because it will cause compile-time errors.  
   
 ***  
   
 ### Creating a [Room](https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase) [Database](https://developer.android.com/reference/android/arch/persistence/room/Database)  
+  
 You need to create an abstract database holder class, annotated with `@Database`. This class has one method that either creates an instance of the database if the database doesn't exist, or returns a reference to an existing database.  
   
 Getting a `Room` database is a bit involved, so here's the general process before you start with the code:  
   
-* Create a `public abstract` class that `extends RoomDatabase`. This class is to act as a database holder. The class is abstract, because `Room` creates the implementation for you.  
-* Annotate the class with `@Database`. In the arguments, declare the entities for the database and set the version number.  
-* Inside a [companion object](https://kotlinlang.org/docs/reference/object-declarations.html#Companion-Objects), define an abstract method or property that returns a `SleepDatabaseDao`. `Room` will generate the body for you.  
-* You only need one instance of the `Room` database for the whole app, so make the `RoomDatabase` a [singleton](https://en.wikipedia.org/wiki/Singleton_pattern).  
-* Use `Room`'s database [builder](https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.Builder) to create the database only if the database doesn't exist. Otherwise, return the existing database.  
+- Create a `public abstract` class that `extends RoomDatabase`. This class is to act as a database holder. The class is abstract, because `Room` creates the implementation for you.  
+- Annotate the class with `@Database`. In the arguments, declare the entities for the database and set the version number.  
+- Inside a [companion object](https://kotlinlang.org/docs/reference/object-declarations.html#Companion-Objects), define an abstract method or property that returns a `SleepDatabaseDao`. `Room` will generate the body for you.  
+- You only need one instance of the `Room` database for the whole app, so make the `RoomDatabase` a [singleton](https://en.wikipedia.org/wiki/Singleton_pattern).  
+- Use `Room`'s database [builder](https://developer.android.com/reference/android/arch/persistence/room/RoomDatabase.Builder) to create the database only if the database doesn't exist. Otherwise, return the existing database.  
   
 **Tip:** The code will be much the same for any `Room` database, so you can use this code as a template.  
   
@@ -229,7 +237,8 @@ companion object {}
 ```  
   
 4. Inside the `companion` object, declare a private nullable variable `INSTANCE` for the database and initialize it to `null`. The `INSTANCE` variable will keep a reference to the database, once one has been created. This helps you avoid repeatedly opening connections to the database, which is expensive.  
-* Annotate `INSTANCE` with `@Volatile`. The value of a [volatile](https://developer.android.com/jetpack/docs/guide#separation-of-concerns) variable _will never be cached_, and all writes and reads will be done to and from the main memory. This helps make sure the value of `INSTANCE` is always up-to-date and the same to all execution threads. It means that changes made by one thread to `INSTANCE` are visible to all other threads immediately, and you don't get a situation where, say, two threads each update the same entity in a cache, which would create a problem.  
+  
+- Annotate `INSTANCE` with `@Volatile`. The value of a [volatile](https://developer.android.com/jetpack/docs/guide#separation-of-concerns) variable _will never be cached_, and all writes and reads will be done to and from the main memory. This helps make sure the value of `INSTANCE` is always up-to-date and the same to all execution threads. It means that changes made by one thread to `INSTANCE` are visible to all other threads immediately, and you don't get a situation where, say, two threads each update the same entity in a cache, which would create a problem.  
   
 ```kotlin  
 @Volatile  
@@ -291,6 +300,7 @@ INSTANCE = instance
 ```  
   
 Your final code should look like this:  
+  
 ```kotlin  
 import android.content.Context  
 import androidx.room.Database  
@@ -379,11 +389,13 @@ abstract class SleepDatabase : RoomDatabase() {
     }  
 }  
 ```  
+  
 You now have all the building blocks for working with your `Room` database. This code compiles and runs, but you have no way of telling if it actually works. So, this is a good time to add some basic tests.  
   
 ***  
   
 ### [Testing](https://developer.android.com/training/testing) the Room Database  
+  
 In this step, you run provided tests to verify that your database works. This helps ensure that the database works before you build onto it. The provided tests are basic. For a production app, you would exercise all of the functions and queries in all the DAOs.  
   
 The starter app contains an **androidTest** folder. This **androidTest** folder contains unit tests that involve Android instrumentation, which is a fancy way of saying that the tests need the Android framework, so you need to run the tests on a physical or virtual device. Of course, you can also create and run pure unit tests that do not involve the Android framework.  
@@ -392,16 +404,17 @@ In the `androidTest` folder, open the `SleepDatabaseTest` file. Uncomment the co
   
 Here's a quick run-through of the testing code, because it's another piece of code that you can reuse:  
   
-* `SleepDabaseTest` is a test class.  
-* The `@RunWith` annotation identifies the test runner, which is the program that sets up and executes the tests.  
-* During setup, the function annotated with `@Before` is executed, and it creates an in-memory `SleepDatabase` with the `SleepDatabaseDao`. "In-memory" means that this database is not saved on the file system and will be deleted after the tests run.  
-* Also when building the in-memory database, the code calls another test-specific method, `allowMainThreadQueries`. By default, you get an error if you try to run queries on the main thread. This method allows you to run tests on the main thread, which you should only do during testing.  
-* In a test method annotated with `@Test`, you create, insert, and retrieve a `SleepNight`, and assert that they are the same. If anything goes wrong, throw an exception. In a real test, you would have multiple `@Test`  methods.  
-* When testing is done, the function annotated with `@After` executes to close the database.  
+- `SleepDabaseTest` is a test class.  
+- The `@RunWith` annotation identifies the test runner, which is the program that sets up and executes the tests.  
+- During setup, the function annotated with `@Before` is executed, and it creates an in-memory `SleepDatabase` with the `SleepDatabaseDao`. "In-memory" means that this database is not saved on the file system and will be deleted after the tests run.  
+- Also when building the in-memory database, the code calls another test-specific method, `allowMainThreadQueries`. By default, you get an error if you try to run queries on the main thread. This method allows you to run tests on the main thread, which you should only do during testing.  
+- In a test method annotated with `@Test`, you create, insert, and retrieve a `SleepNight`, and assert that they are the same. If anything goes wrong, throw an exception. In a real test, you would have multiple `@Test`  methods.  
+- When testing is done, the function annotated with `@After` executes to close the database.  
   
 ***  
   
 ### Displaying Sleep Data  
+  
 Open `activity_main.xml`. This layout contains the `nav_host_fragment`.  
 Also, notice the `merge` tag. The merge tag can be used to eliminate redundant layouts when including layouts, and it's a good idea to use it. You can find more information about it [here](https://developer.android.com/training/improving-layouts/reusing-layouts).  
   
@@ -423,6 +436,7 @@ Also, notice the `merge` tag. The merge tag can be used to eliminate redundant l
 ***  
   
 ### Adding A ViewModel  
+  
 Now that you have a database and a UI, you need to collect data, add the data to the database, and display the data. All this work is done in the view model. Your sleep-tracker view model will handle button clicks, interact with the database via the `DAO`, and provide data to the UI via `LiveData`. All database operations will have to be run away from the main UI thread, and you'll do that using `coroutines`.  
   
 1. In the **sleeptracker** package, open **SleepTrackerViewModel.kt**. Inspect the provided `SleepTrackerViewModel` class definition that extends `AndroidViewModel()`. This class is the same as `ViewModel`, but it takes the application context as a parameter and makes it available as a property. You are going to need this later on to access resources. The `ViewModel` needs access to the data in the database, so pass in an instance of the `SleepDatabaseDao`. And then pass this up to the super class as well.  
@@ -435,9 +449,11 @@ class SleepTrackerViewModel(
 ```  
   
 2. In the **sleeptracker** package, open **SleepTrackerViewModelFactory.kt.  
-* The provided `SleepTrackerViewModelFactory` takes the same argument as the `ViewModel` and extends `ViewModelProvider.Factory`.  
-* Inside the factory, the code overrides `create()`, which takes any class type as an argument and returns a `ViewModel`.  
-* In the body of `create()`, the code checks that there is a `SleepTrackerViewModel` class available, and if there is, returns an instance of it. Otherwise, the code throws an exception.  
+  
+- The provided `SleepTrackerViewModelFactory` takes the same argument as the `ViewModel` and extends `ViewModelProvider.Factory`.  
+  
+- Inside the factory, the code overrides `create()`, which takes any class type as an argument and returns a `ViewModel`.  
+- In the body of `create()`, the code checks that there is a `SleepTrackerViewModel` class available, and if there is, returns an instance of it. Otherwise, the code throws an exception.  
   
 **Tip:** This is mostly boilerplate code, so you can reuse the code for future view-model factories.  
   
@@ -532,8 +548,10 @@ With the basic `ViewModel` in place, you need to finish setting up data binding 
 ```  
   
 2. In `SleepTrackerFragment`:  
-* Set the current activity as the lifecycle owner of the binding. Add this code inside the `onCreateView()` method, before the `return` statement.  
-* Assign the `sleepTrackerViewModel` binding variable to the `sleepTrackerViewModel`. Put this code inside `onCreateView()`, below the code that creates the `SleepTrackerViewModel`  
+  
+- Set the current activity as the lifecycle owner of the binding. Add this code inside the `onCreateView()` method, before the `return` statement.  
+  
+- Assign the `sleepTrackerViewModel` binding variable to the `sleepTrackerViewModel`. Put this code inside `onCreateView()`, below the code that creates the `SleepTrackerViewModel`  
   
 ```kotlin  
 binding.sleepTrackerViewModel = sleepTrackerViewModel  
@@ -543,16 +561,19 @@ binding.lifecycleOwner = this
 ***  
   
 ### Multithreading and Coroutines  
+  
 To use processors more efficiently, the operating system can enable an application to create more than one thread of execution within a process.  
   
 There is a lot of infrastructure to manage all those threads needing to run, sometimes in a given order and finished to:  
-* **Scheduler**: which takes into account things such as priorities and makes sure all the threads get to run and finish.  
-* **Dispatcher**: which sets up threads, and specifies a context for that to happen in.  
-* **Context**: You can think of the context as a separate specialized reading room. Some contexts are best for user interface stuff, and some are specialized to deal with input, output operations.  
+  
+- **Scheduler**: which takes into account things such as priorities and makes sure all the threads get to run and finish.  
+- **Dispatcher**: which sets up threads, and specifies a context for that to happen in.  
+- **Context**: You can think of the context as a separate specialized reading room. Some contexts are best for user interface stuff, and some are specialized to deal with input, output operations.  
   
 A user-facing application usually has a main thread that runs in a foreground and can dispatch other threads that may run into background.  
-* On Android, the main thread is a single thread that handles all updates to the UI. The main thread is also the thread that calls all click handlers and other UI and life cycle callbacks.  
-* The UI thread is the default thread, meaning unless you explicitly switched threads or use a class that runs on a different thread, everything you do is on the main thread.  
+  
+- On Android, the main thread is a single thread that handles all updates to the UI. The main thread is also the thread that calls all click handlers and other UI and life cycle callbacks.  
+- The UI thread is the default thread, meaning unless you explicitly switched threads or use a class that runs on a different thread, everything you do is on the main thread.  
   
 It's essential to avoid blocking the UI thread. Blocking in this context means the UI thread is waiting,  
 not doing anything at all for an action to be done. For example, something like a database to be done updating. Many common tasks take longer than 16 milliseconds, such as fetching data from the internet,  
@@ -561,25 +582,31 @@ reading a large file, or writing data to a database. Therefore, calling code lik
 ***  
   
 ### [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html)  
+  
 #### Callbacks  
-* One pattern for performing long-running tasks without blocking the main thread is to use [callbacks](https://en.wikipedia.org/wiki/Callback_%28computer_programming%29). See the [Multi-threading & callbacks primer](https://developer.android.com/courses/extras/multithreading) for an introduction to multi-threading and callbacks.  
-* By using callbacks, you can start long-running tasks on a background thread.  
-* When a task completes, the callback supplied as an argument is called to inform you of the result on the main thread.  
+  
+- One pattern for performing long-running tasks without blocking the main thread is to use [callbacks](https://en.wikipedia.org/wiki/Callback_%28computer_programming%29). See the [Multi-threading & callbacks primer](https://developer.android.com/courses/extras/multithreading) for an introduction to multi-threading and callbacks.  
+  
+- By using callbacks, you can start long-running tasks on a background thread.  
+- When a task completes, the callback supplied as an argument is called to inform you of the result on the main thread.  
   
 Callbacks have a few drawbacks:  
-* Codes that heavily uses callbacks can become hard to read and harder to reason about.  
-* Because while the code looks sequential, the callback code will run at some asynchronous time in the future.  
-* In addition, callbacks don't allow the use of some language features, such as exceptions.  
+  
+- Codes that heavily uses callbacks can become hard to read and harder to reason about.  
+- Because while the code looks sequential, the callback code will run at some asynchronous time in the future.  
+- In addition, callbacks don't allow the use of some language features, such as exceptions.  
   
 #### Coroutines  
+  
 In Kotlin, coroutines are the way to handle long-running tasks elegantly and efficiently. Kotlin coroutines let you convert callback-based code to sequential code. Code written sequentially is typically easier to read and can even use language features such as exceptions. In the end, coroutines and callbacks do the same thing: they wait until a result is available from a long-running task and continue execution.  
   
 Coroutines have the following properties:  
   
 **Coroutines are asynchronous.**  
-* A coroutine runs independently from the main execution steps of your program.  
-* This could be in parallel or on a separate processor. It could also be that while the rest of the app is waiting for input, you sneak in a bit of processing.  
-* One of the important aspects of async is that you cannot expect that the result is available, until you explicitly wait for it.  
+  
+- A coroutine runs independently from the main execution steps of your program.  
+- This could be in parallel or on a separate processor. It could also be that while the rest of the app is waiting for input, you sneak in a bit of processing.  
+- One of the important aspects of async is that you cannot expect that the result is available, until you explicitly wait for it.  
   
 For example, let's say you have a question that requires research, and you ask a colleague to find the answer. They go off and work on it, which is like they're doing the work "asynchronously" and "on a separate thread." You can continue to do other work that doesn't depend on the answer, until your colleague comes back and tells you what the answer is.  
   
@@ -595,7 +622,7 @@ The `suspend` keyword doesn't specify the thread that the code runs on. A suspen
   
 **Tip:** The difference between _blocking_ and _suspending_ is that if a thread is blocked, no other work happens. If the thread is suspended, other work happens until the result is available.  
   
-![non-blocking.png](../../../non-blocking.png)  
+![non-blocking.png](../../../assets/img/non-blocking.png)  
   
 To use coroutines in Kotlin, you need three things:  
   
@@ -606,22 +633,25 @@ To use coroutines in Kotlin, you need three things:
 **Scope:** A coroutine's _scope_ defines the context in which the coroutine runs. A scope combines information about a coroutine's job and [dispatchers](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/index.html). Scopes keep track of coroutines. When you launch a coroutine, it's "in a scope," which means that you've indicated which scope will keep track of the coroutine.  
   
 #### Kotlin coroutines with Architecture components  
+  
 [`CoroutineScope`](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/): A `CoroutineScope` keeps track of all your coroutines, helps you to manage when your coroutines should run. It can also cancel all of the coroutines started in it. Each asynchronous operation or a coroutine runs within a particular scope.  
   
 [Architecture components](https://developer.android.com/topic/libraries/architecture?authuser=1) provide first-class support for coroutines for logical scopes in your app. Architecture components define the following built-in scopes that you can use in your app. The built-in coroutine scopes are in the [KTX extensions](https://developer.android.com/kotlin/ktx?authuser=1) for each corresponding Architecture component. Be sure to add the appropriate dependencies when using these scopes.  
   
-* [`ViewModelScope`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#viewmodelscope)  
-* [`LifecycleScope`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#lifecyclescope)  
-* [`liveData`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#livedata)  
+- [`ViewModelScope`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#viewmodelscope)  
+- [`LifecycleScope`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#lifecyclescope)  
+- [`liveData`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#livedata)  
   
 [`ViewModelScope`](https://developer.android.com/topic/libraries/architecture/coroutines?authuser=1#viewmodelscope): A `ViewModelScope` is defined for each [`ViewModel`](https://developer.android.com/topic/libraries/architecture/viewmodel?authuser=1) in your app. Any coroutine launched in this scope is automatically canceled if the `ViewModel` is cleared. In this codelab you will use `ViewModelScope` to initiate the database operations.  
   
 #### Room and Dispatcher  
+  
 When using the Room library to perform a database operation, Room uses a `Dispatchers.IO` for you to perform the database operations in the background. You don't have to explicitly specify the `Dispatchers`.  
   
 ***  
   
 ### Implementing Coroutines  
+  
 <details><summary>Old method</summary>  
 <p>  
   
@@ -652,7 +682,9 @@ private val uiScope = CoroutineScope(Dispatchers.Main +  viewModelJob)
 </details>  
   
 #### Step 1: Mark DAO functions as suspend functions  
+  
 Open `database/SleepDatabaseDao.kt`, add suspend keyword to all the methods except for `getAllNights()`. The complete `SleepDatabaseDao` class will look like this.  
+  
 ```kotlin  
 @Dao  
 interface SleepDatabaseDao {  
@@ -676,6 +708,7 @@ interface SleepDatabaseDao {
    fun getAllNights(): LiveData<List<SleepNight>>  
 }  
 ```  
+  
 #### Step 2: Set up coroutines for database operations  
   
 When the **Start** button in the Sleep Tracker app is tapped, you want to call a function in the `SleepTrackerViewModel` to create a new instance of `SleepNight` and store the instance in the database.  
@@ -730,6 +763,7 @@ private suspend fun getTonightFromDatabase(): SleepNight? { }
     }  
     return night  
 ```  
+  
 Your completed `getTonightFromDatabase()` `suspend` function should look like this.  
   
 ```kotlin  
@@ -821,7 +855,9 @@ android:onClick="@{() -> sleepTrackerViewModel.onStartTracking()}"
 ```  
   
 ##### The pattern  
+  
 Now you can see a pattern:  
+  
 1. Launch a coroutine that runs on the main or UI thread, because the result affects the UI. You can access the `CoroutineScope` of a ViewModel through the `viewModelScope` property of the ViewModel, as shown in the following example:  
 2. Call a suspend function to do the long-running work, so that you don't block the UI thread while waiting for the result.  
 3. The long-running work has nothing to do with the UI. Switch to the I/O dispatcher,(if using Room, this code is generated for you) so that the work can run in a thread pool that's optimized and set aside for these kinds of operations.  
@@ -934,6 +970,7 @@ android:onClick="@{() -> sleepTrackerViewModel.onStopTracking()}"
 ```  
   
 #### Step 6: Add the click handler for the Clear button  
+  
 1. Similarly, implement `onClear()` and `clear()`.  
   
 ```kotlin  
@@ -964,21 +1001,26 @@ android:onClick="@{() -> sleepTrackerViewModel.onClear()}"
 ***  
   
 ### Navigation and Sleep Quality  
-* Now to give users a way to enter the sleep quality, we are going to use a fragment with touchable icons.  
-* We press "START" to start the sleep night. Then when we press "STOP" and we navigate back to the sleep quality tracker fragment, where we can press a pretty smiley icon, which takes us right back and updates the sleep quality.  
+  
+- Now to give users a way to enter the sleep quality, we are going to use a fragment with touchable icons.  
+  
+- We press "START" to start the sleep night. Then when we press "STOP" and we navigate back to the sleep quality tracker fragment, where we can press a pretty smiley icon, which takes us right back and updates the sleep quality.  
   
 In more pragmatic terms, our basic workflow is the user presses, "STOP" is:  
-* On stop tracking we navigate to this `SleepQualityFragment`.  
-* We use `safeArgs` to pass the correct night's key so that we can update the correct sleep night.  
-* Once the user taps a quality icon, we update the current night and return to the `SleepTrackerFragment`.  
-* As an additional challenge, we also need to handle the back button.  
-* We want the navigation to happen in the fragment, but the click handler stays in the `ViewModel` processing the data.  
-* We do this by creating a navigation event variable in a `ViewModel`, observe the variable, when the variable changes navigate immediately, and create a navigation event variable to signify we have finished navigating.  
+  
+- On stop tracking we navigate to this `SleepQualityFragment`.  
+- We use `safeArgs` to pass the correct night's key so that we can update the correct sleep night.  
+- Once the user taps a quality icon, we update the current night and return to the `SleepTrackerFragment`.  
+- As an additional challenge, we also need to handle the back button.  
+- We want the navigation to happen in the fragment, but the click handler stays in the `ViewModel` processing the data.  
+- We do this by creating a navigation event variable in a `ViewModel`, observe the variable, when the variable changes navigate immediately, and create a navigation event variable to signify we have finished navigating.  
   
 ***  
   
 ### Recording Sleep Quality  
+  
 #### Add navigation  
+  
 The navigation graph already includes the paths from the `SleepTrackerFragment` to the `SleepQualityFragment` and back again. However, the click handlers that implement the navigation from one fragment to the next are not coded yet. You add that code now in the `ViewModel`.  
   
 In the click handler, you set a `LiveData` that changes when you want the app to navigate to a different destination. The fragment observes this `LiveData`. When the data changes, the fragment navigates to the destination and tells the view model that it's done, which resets the state variable.  
@@ -1043,9 +1085,11 @@ sleepTrackerViewModel.navigateToSleepQuality.observe(viewLifecycleOwner, Observe
 ```  
   
 ##### [Kotlin let](https://www.journaldev.com/19467/kotlin-let-run-also-apply-with#kotlin-let)  
-* `let` takes the object it is invoked upon as the parameter and returns the result of the lambda expression.    
-* Kotlin let is a scoping function wherein the variables declared inside the expression cannot be used outside.  
-* Additionally, let is useful for checking Nullable properties as shown below.  
+  
+- `let` takes the object it is invoked upon as the parameter and returns the result of the lambda expression.    
+  
+- Kotlin let is a scoping function wherein the variables declared inside the expression cannot be used outside.  
+- Additionally, let is useful for checking Nullable properties as shown below.  
   
 ```kotlin  
 var name : String? = "Kotlin let null check"  
@@ -1055,6 +1099,7 @@ name?.let { println(it) } //nothing happens
 ```  
   
 #### Record the sleep quality  
+  
 **Step 1: Create a `ViewModel` and a `ViewModelFactory`**  
   
 1. In the `sleepquality` package, create or open **SleepQualityViewModel.kt.**  
@@ -1099,11 +1144,13 @@ fun doneNavigating() {
 ```  
   
 4. Create one click handler, `onSetSleepQuality()`, for all the sleep-quality images to use. Use the same coroutine pattern:  
-* Launch a coroutine in the _`viewModelScope`_  
-* Get `tonight` using the `sleepNightKey`.  
-* Set the sleep quality.  
-* Update the database.  
-* Trigger navigation.  
+  
+- Launch a coroutine in the _`viewModelScope`_  
+  
+- Get `tonight` using the `sleepNightKey`.  
+- Set the sleep quality.  
+- Update the database.  
+- Trigger navigation.  
   
 Notice that the code sample below does all the work in the click handler, instead of factoring out the database operation in the different context.  
   
@@ -1218,6 +1265,7 @@ android:onClick="@{() -> sleepQualityViewModel.onSetSleepQuality(5)}"
 ***  
   
 ### Button States  
+  
 Now your app works great. The user can tap **Start** and **Stop** as many times as they want. When the user taps **Stop**, they can enter a sleep quality. When the user taps **Clear**, all the data is cleared silently in the background. However, all the buttons are always enabled and clickable, which does not break the app, but it does allow users to create incomplete sleep nights.  
   
 The idea is to set the button state so that in the beginning, only the **Start** button is enabled, which means it is clickable.  
@@ -1247,9 +1295,9 @@ android:enabled="@{sleepTrackerViewModel.clearButtonVisible}"
   
 3. Open `SleepTrackerViewModel` and create three corresponding variables. Assign each variable a transformation that tests it.  
   
-* The **Start** button should be enabled when `tonight` is `null`.  
-* The **Stop** button should be enabled when `tonight` is not `null`.  
-* The **Clear** button should only be enabled if `nights`, and thus the database, contains sleep nights.  
+- The **Start** button should be enabled when `tonight` is `null`.  
+- The **Stop** button should be enabled when `tonight` is not `null`.  
+- The **Clear** button should only be enabled if `nights`, and thus the database, contains sleep nights.  
   
 ```kotlin  
 /**  
@@ -1289,6 +1337,7 @@ To define which colors to use for enabled and disabled states, use a [`ColorStat
 ***  
   
 ### [SnackBar](https://material.io/develop/android/components/snackbar/)  
+  
 After the user clears the database, show the user a confirmation using the [`Snackbar`](https://material.io/develop/android/components/snackbar/) widget. A _snackbar_ provides brief feedback about an operation through a message at the bottom of the screen. A snackbar disappears after a timeout, after a user interaction elsewhere on the screen, or after the user swipes the snackbar off the screen.  
   
 Showing the snackbar is a UI task, and it should happen in the fragment. Deciding to show the snackbar happens in the `ViewModel`. To set up and trigger a snackbar when the data is cleared, you can use the same technique as for triggering navigation.  
@@ -1311,6 +1360,7 @@ val showSnackBarEvent: LiveData<Boolean>
 ```  
   
 2. Then implement `doneShowingSnackbar()`.  
+  
 ```kotlin  
 /**  
 * Call this immediately after calling `show()` on a toast.  
@@ -1346,6 +1396,7 @@ if (it == true) { // Observed state is true.
 ```  
   
 5. In `SleepTrackerViewModel`, trigger the event in the `onClear()` method. To do this, set the event value to `true` inside the `launch` block:  
+  
 ```kotlin  
 // Show a snackbar message, because it's friendly.  
 _showSnackbarEvent.value = true  
@@ -1357,20 +1408,20 @@ _showSnackbarEvent.value = true
   
 #### Create a Room Database  
   
-* Define your tables as data classes annotated with `@Entity`. Define properties annotated with `@ColumnInfo` as columns in the tables.  
-* Define a data access object (DAO) as an interface annotated with `@Dao`. The DAO maps Kotlin functions to database queries.  
-* Use annotations to define `@Insert`, `@Delete`, and `@Update` functions.  
-* Use the `@Query` annotation with an SQLite query string as a parameter for any other queries.  
-* Create an abstract class that has a `getInstance()` function that returns a database.  
-* Use instrumented tests to test that your database and DAO are working as expected. You can use the provided tests as a template.  
+- Define your tables as data classes annotated with `@Entity`. Define properties annotated with `@ColumnInfo` as columns in the tables.  
+- Define a data access object (DAO) as an interface annotated with `@Dao`. The DAO maps Kotlin functions to database queries.  
+- Use annotations to define `@Insert`, `@Delete`, and `@Update` functions.  
+- Use the `@Query` annotation with an SQLite query string as a parameter for any other queries.  
+- Create an abstract class that has a `getInstance()` function that returns a database.  
+- Use instrumented tests to test that your database and DAO are working as expected. You can use the provided tests as a template.  
   
 #### Coroutines and Room  
   
-* Use `ViewModel`, `ViewModelFactory`, and data binding to set up the UI architecture for the app.  
-* To keep the UI running smoothly, use coroutines for long-running tasks, such as all database operations.  
-* Coroutines are asynchronous and non-blocking. They use `suspend` functions to make asynchronous code sequential.  
-* When a coroutine calls a function marked with `suspend`, instead of blocking until that function returns like a normal function call, it suspends execution until the result is ready. Then it resumes where it left off with the result.  
-* The difference between _blocking_ and _suspending_ is that if a thread is blocked, no other work happens. If the thread is suspended, other work happens until the result is available.  
+- Use `ViewModel`, `ViewModelFactory`, and data binding to set up the UI architecture for the app.  
+- To keep the UI running smoothly, use coroutines for long-running tasks, such as all database operations.  
+- Coroutines are asynchronous and non-blocking. They use `suspend` functions to make asynchronous code sequential.  
+- When a coroutine calls a function marked with `suspend`, instead of blocking until that function returns like a normal function call, it suspends execution until the result is ready. Then it resumes where it left off with the result.  
+- The difference between _blocking_ and _suspending_ is that if a thread is blocked, no other work happens. If the thread is suspended, other work happens until the result is available.  
   
 To implement click handlers that trigger database operations, follow this pattern:  
   
@@ -1385,31 +1436,31 @@ Use a `Transformations` map to create a string from a `LiveData` object every ti
   
 Implementing sleep quality tracking in this app is like playing a familiar piece of music in a new key. While details change, the underlying pattern of what you did in previous codelabs in this lesson remains the same. Being aware of these patterns makes coding much faster, because you can reuse code from existing apps. Here are some of the patterns used in this course so far:  
   
-* Create a `ViewModel` and a `ViewModelFactory` and set up a data source.  
-* Trigger navigation. To separate concerns, put the click handler in the view model and the navigation in the fragment.  
-* Use encapsulation with `LiveData` to track and respond to state changes.  
-* Use transformations with `LiveData`.  
-* Create a singleton database.  
-* Set up coroutines for database operations.  
+- Create a `ViewModel` and a `ViewModelFactory` and set up a data source.  
+- Trigger navigation. To separate concerns, put the click handler in the view model and the navigation in the fragment.  
+- Use encapsulation with `LiveData` to track and respond to state changes.  
+- Use transformations with `LiveData`.  
+- Create a singleton database.  
+- Set up coroutines for database operations.  
   
 **Triggering navigation**  
   
 You define possible navigation paths between fragments in a navigation file. There are some different ways to trigger navigation from one fragment to the next. These include:  
   
-* Define `onClick` handlers to trigger navigation to a destination fragment.  
-* Alternatively, to enable navigation from one fragment to the next:  
-* Define a `LiveData` value to record if navigation should occur.  
-* Attach an observer to that `LiveData` value.  
-* Your code then changes that value whenever navigation needs to be triggered or is complete.  
+- Define `onClick` handlers to trigger navigation to a destination fragment.  
+- Alternatively, to enable navigation from one fragment to the next:  
+- Define a `LiveData` value to record if navigation should occur.  
+- Attach an observer to that `LiveData` value.  
+- Your code then changes that value whenever navigation needs to be triggered or is complete.  
   
 **Setting the android:enabled attribute**  
   
-* The [`android:enabled`](https://developer.android.com/reference/android/widget/TextView.html#attr_android:enabled) attribute is defined in `TextView` and inherited by all subclasses, including `Button`.  
-* The `android:enabled` attribute determines whether or not a `View` is enabled. The meaning of "enabled" varies by subclass. For example, a non-enabled `EditText` prevents the user from editing the contained text, and a non-enabled `Button` prevents the user from tapping the button.  
-* The `enabled` attribute is not the same as the `visibility` attribute.  
-* You can use transformation maps to set the value of the `enabled` attribute of buttons based on the state of another object or variable.  
+- The [`android:enabled`](https://developer.android.com/reference/android/widget/TextView.html#attr_android:enabled) attribute is defined in `TextView` and inherited by all subclasses, including `Button`.  
+- The `android:enabled` attribute determines whether or not a `View` is enabled. The meaning of "enabled" varies by subclass. For example, a non-enabled `EditText` prevents the user from editing the contained text, and a non-enabled `Button` prevents the user from tapping the button.  
+- The `enabled` attribute is not the same as the `visibility` attribute.  
+- You can use transformation maps to set the value of the `enabled` attribute of buttons based on the state of another object or variable.  
   
 Other points covered in this codelab:  
   
-* To trigger notifications to the user, you can use the same technique as you use to trigger navigation.  
-* You can use a [`Snackbar`](https://material.io/develop/android/components/snackbar/) to notify the user.
+- To trigger notifications to the user, you can use the same technique as you use to trigger navigation.  
+- You can use a [`Snackbar`](https://material.io/develop/android/components/snackbar/) to notify the user.  
