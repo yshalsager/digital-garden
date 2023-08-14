@@ -1,10 +1,11 @@
 ---  
-created: 2022-05-22 14:38  
-updated: 2022-06-20 18:25  
-title: Lesson 07 - RecyclerView  
+created: 2022-05-22 14:38:00  
+updated: 2023-08-10 22:50:24  
+title: Lesson 07 RecyclerView  
 share: true  
 website: en/notes/programming  
 ---  
+  
 ## Lesson 07: [RecyclerView](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView)  
   
 > Everything is better in a list! Recycler View has been - and continues to be - an essential component of any app design. This lesson is all about making your [app](https://github.com/udacity/andfun-kotlin-sleep-tracker-with-recyclerview) better with Recycler Views.  
@@ -16,32 +17,44 @@ Displaying a list or grid of data is one of the most common UI tasks in Android.
 To support all these use cases, Android provides the `RecyclerView` widget.  
   
 * `RecyclerView` is designed to be efficient even when displaying extremely large lists. It allows you to build everything from simple lists of `TextViews` all the way to very complex collections of views.  
+  
 * It only support displaying different types of items in the same list. For example, a news app may want to mix video items into a list of headlines.  
+  
 * `RecyclerView` is also highly customizable. Out-of-the-box, it supports lists and grids. You can configure it to scroll horizontally or vertically. If the default options aren't enough, you can even build your own layout manager to make `RecyclerView` display any design you dream up.  
   
 **Advantages of RecyclerView**  
+  
 * Efficient display of large list.  
+  
 * Minimizing refreshes when an item is updated, deleted, or added to the list.  
+  
 * Reusing views that scroll off screen to display the next item that scrolls on screen.  
+  
 * Displaying items in a list or a grid.  
+  
 * Scrolling vertically or horizontally.  
+  
 * Allowing custom layouts when a list or a grid is not enough for the use case.  
   
 The greatest benefit of `RecyclerView` is that it is very efficient for large lists:  
   
 * By default, `RecyclerView` only does work to process or draw items that are currently visible on the screen. For example, if your list has a thousand elements but only 10 elements are visible, `RecyclerView` does only enough work to draw 10 items on the screen. When the user scrolls, `RecyclerView` figures out what new items should be on the screen and does just enough work to display those items.  
+  
 * When an item scrolls off the screen, the item's views are recycled. That means the item is filled with new content that scrolls onto the screen. This `RecyclerView` behavior saves a lot of processing time and helps lists scroll fluidly.  
+  
 * When an item changes, instead of redrawing the entire list, `RecyclerView` can update that one item. This is a huge efficiency gain when displaying lists of complex items!  
   
 In the sequence shown below, you can see that one view has been filled with data, `ABC`. After that view scrolls off the screen, `RecyclerView` reuses the view for new data, `XYZ`.  
   
-![RecyclerView.png](../../../RecyclerView.png)  
+![RecyclerView.png](../../../assets/img/RecyclerView.png)  
   
 #### Other options  
   
-`RecyclerView`, while efficient and customizable, is not the only way to display a list of things on Androids.  
+`RecyclerView`, while efficient and customizable, is not the only way to display a list of things on Androids.    
 Android also ships with a few other options for displaying lists.  
+  
 * The first are `ListView` and `GridView` for displaying a scrolling list and grid respectively. You can think of this as `RecyclerView` simpler, but less powerful siblings. Both of them work for displaying a small list of items that aren't too complex, like 100 items. They are not nearly as efficient as `RecyclerView`, and they don't offer nearly as many options for customizing the display.  
+  
 * The other option is `LinearLayout`. You've already seen that earlier linear layout can be used to display a small list of items, for example three to five.  
   
 ***  
@@ -59,17 +72,25 @@ The [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern) in software
 `RecyclerView` adapters must provide a few methods for `RecyclerView` to understand how to display the data on screen.  
   
 * First, in order to know how far to scroll, the adapter needs to tell the recycler view **how many items** are available.  
+  
 * Then you provide **a way for the RecyclerView to draw a specific item**. `RecyclerView` we'll use this anytime an item enters the screen or if you update or add an item that's churned on the screen.  
+  
 * Finally, you must provide `RecyclerView` with **a way to create a new view for an item**. This is important because while recycler view is responsible for handling the recycling and efficient display of the views, it has no idea what kind of views you would like to display.  
   
 #### How does RecyclerView works?  
   
 * When `RecyclerView` runs, it will use the adapter to figure out how to display your data on screen.  
+  
 * When it first starts out, it will ask the adapter how many items there are. If the adapter set there is 100, it will immediately start creating just the views needed for the first screen.  
+  
 * First, recycler view will ask the adapter to create a new view for the first data item in your list.  
+  
 * Once it has the view, it will ask the adapter to draw the item. It will repeat this until it doesn't need any more views to fill the screen.  
+  
 * Then your `RecyclerView` is done. It won't look at the other items in the list until the user scrolls to list on screen.  
+  
 * If it's items go off the screen, they will be reused or recycled in the next position that gets displayed.  
+  
 * When recycling, `RecyclerView` doesn't need to create a view. It will just use the old one and ask the adapter how to draw the next item into it.  
   
 #### [ViewHolder](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.ViewHolder.html)  
@@ -77,7 +98,9 @@ The [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern) in software
 To implement recycling and support multiple types of views, `RecyclerView` doesn't interact it to views but instead `ViewHolders`. This is the last part of the adapter interface.  
   
 * `ViewHolders` do exactly what it sounds like they do, **hold views**. They also had a lot of extra information that `RecyclerView` uses to efficiently move views around the screen.  
+  
 * `ViewsHolders` know things like the last position the items have in the list, which is important when you are animating list changes. In other words, **storing information for RecyclerView**.  
+  
 * `ViewHolders` really don't do that much, and they're mostly an implementation detail of the `RecyclerView`. Your adapter will take care of providing any `ViewHolders` that the `RecyclerView` needs.  
   
 #### Implementing a RecyclerView  
@@ -85,22 +108,29 @@ To implement recycling and support multiple types of views, `RecyclerView` doesn
 To display your data in a `RecyclerView`, you need the following parts:  
   
 * **Data** to display.  
+  
 * **A [`RecyclerView`](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView)** instance defined in your layout file, to act as the container for the views.  
-* **A layout for one item of data**.   
+  
+* **A layout for one item of data**.    
  If all the list items look the same, you can use the same layout for all of them, but that is not mandatory. The item layout has to be created separately from the fragment's layout, so that one item view at a time can be created and filled with data.  
-* **A [layout manager](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.LayoutManager)**.  
+  
+* **A [layout manager](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.LayoutManager)**.    
  A `RecyclerView` uses a `LayoutManager` to organize the layout of the items in the `RecyclerView`, such as laying them out in a grid or in a linear list. In the `<RecyclerView>` in the layout file, set the `app:layoutManager` attribute to the layout manager (such as `LinearLayoutManager` or `GridLayoutManager`). You can also set the `LayoutManager` for a `RecyclerView` programmatically.  
-* **A view holder**.  
+  
+* **A view holder**.    
  The view holder extends the `ViewHolder` class. It contains the view information for displaying one item from the item's layout. View holders also add information that `RecyclerView` uses to efficiently move views around the screen.  
- * The `onBindViewHolder()` method in the adapter adapts the data to the views. You always override this method. Typically, `onBindViewHolder()` inflates the layout for an item, and puts the data in the views in the layout.  
- * Because the `RecyclerView` knows nothing about the data, the `Adapter` needs to inform the `RecyclerView` when that data changes. Use `notifyDataSetChanged()`to notify the `Adapter` that the data has changed.  
-* **An adapter**.   
- The adapter connects your data to the `RecyclerView`. It adapts the data so that it can be displayed in a `ViewHolder`. A `RecyclerView` uses the adapter to figure out how to display the data on the screen.  
- The adapter requires you to implement the following methods:   
-– `getItemCount()` to return the number of items.   
-– `onCreateViewHolder()` to return the `ViewHolder` for an item in the list.   
-– `onBindViewHolder()` to adapt the data to the views for an item in the list.  
-![RecyclerView_2.png](../../../RecyclerView_2.png)  
+  
+* The `onBindViewHolder()` method in the adapter adapts the data to the views. You always override this method. Typically, `onBindViewHolder()` inflates the layout for an item, and puts the data in the views in the layout.  
+  
+* Because the `RecyclerView` knows nothing about the data, the `Adapter` needs to inform the `RecyclerView` when that data changes. Use `notifyDataSetChanged()`to notify the `Adapter` that the data has changed.  
+  
+* **An adapter**.    
+ The adapter connects your data to the `RecyclerView`. It adapts the data so that it can be displayed in a `ViewHolder`. A `RecyclerView` uses the adapter to figure out how to display the data on the screen.    
+ The adapter requires you to implement the following methods:    
+– `getItemCount()` to return the number of items.    
+– `onCreateViewHolder()` to return the `ViewHolder` for an item in the list.    
+– `onBindViewHolder()` to adapt the data to the views for an item in the list.    
+![RecyclerView_2.png](../../../assets/img/RecyclerView_2.png)  
   
 ***  
   
@@ -157,7 +187,6 @@ class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textVi
   
 5. If you are prompted, import `android.widget.TextView` and `androidx.recyclerview.widget.RecyclerView`.  
   
-  
 #### Step 3: Create `SleepNightAdapter`  
   
 The core task in implementing a `RecyclerView` is creating the [adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter). You have a simple view holder for the item view, and a layout for each item. You can now create an adapter. The adapter creates a view holder and fills it with data for the `RecyclerView` to display.  
@@ -182,7 +211,7 @@ override fun getItemCount() = data.size
 ```  
   
 5. In `SleepNightAdapter`, override the `onBindViewHolder()` function, as shown below. The `onBindViewHolder()`function is called by `RecyclerView` to display the data for one list item at the specified position. So the `onBindViewHolder()` method takes two arguments: a view holder, and a position of the data to bind. For this app, the holder is the `TextItemViewHolder`, and the position is the position in the list.  
-   
+  
 ```kotlin  
 override fun onBindViewHolder(holder: TextItemViewHolder, position: Int) {}  
 ```  
@@ -302,7 +331,6 @@ sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {   })
   
 4. Inside the observer, whenever you get a non-null value (for `nights`), assign the value to the adapter's `data`. This is the completed code for the observer and setting the data:  
   
-  
 ```kotlin  
 sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {  
  it?.let {  
@@ -316,11 +344,17 @@ sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
 If your app compiles but doesn't work, here are a few things to check:  
   
 * Make sure you've added at least one night of sleep.  
+  
 * Do you call `notifyDataSetChanged()` in `SleepNightAdapter`?  
+  
 * Try setting a breakpoint to make sure it's getting called.  
+  
 * Did you register an observer on `sleepTrackerViewModel.nights` in `SleepTrackerFragment`?  
+  
 * Did you set the adapter in `SleepTrackerFragment` with `binding.sleepList.adapter = adapter`?  
+  
 * Does `data` in `SleepNightAdapter` hold a non-empty list?  
+  
 * Try setting a breakpoint in the setter and `getItemCount()`.  
   
 ***  
@@ -371,7 +405,9 @@ class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textVi
 **A ViewHolder** describes an item view and metadata about its place within the `RecyclerView`. In other words, a `ViewHolder` tells a `RecyclerView` where and how an item should get drawn in the list.  
   
 **[itemView](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.ViewHolder.html#itemview)** is the reference that `RecyclerView` reviews when it needs to access the actual view that's being displayed.  
+  
 * `RecyclerView` will use `itemView` when binding an item to display on the screen, when drawing decorations around the view like a border, and for accessibility.  
+  
 * `RecyclerView` doesn't care what kind of view is starting `itemView`. You can put anything you want here, like a `TextView` or even a constraint layout.  
   
 **[getAdapterPosition](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.ViewHolder.html#getAdapterPosition%28%29)()** can be used by the `RecyclerView` to figure out the position in the list that was bound to a particular `ViewHolder`.  
@@ -381,8 +417,8 @@ class TextItemViewHolder(val textView: TextView): RecyclerView.ViewHolder(textVi
 Most of these methods are final. `RecyclerView` will provide them for us and we won't ever need to coat them. However, there is one method that you might provide. Your `ViewHolder` can tell `RecyclerView` what its ID is. An ID is just a unique identifier like night ID on our sleep night. When you override [getItemId](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.ViewHolder.html#getItemId%28%29)(), `RecyclerView` can use this ID when performing animations.  
   
 ### Display the `SleepQuality` List  
-In this step, you create the layout file for one item. The layout consists of a `ConstraintLayout` with an `ImageView` for the sleep quality, a `TextView` for the sleep length, and a `TextView` for the quality as text. Because you've done layouts before, copy and paste the provided XML code.  
   
+In this step, you create the layout file for one item. The layout consists of a `ConstraintLayout` with an `ImageView` for the sleep quality, a `TextView` for the sleep length, and a `TextView` for the quality as text. Because you've done layouts before, copy and paste the provided XML code.  
   
 #### Step 1: Create the item layout  
   
@@ -459,10 +495,14 @@ class SleepNightAdapter: RecyclerView.Adapter<SleepNightAdapter.ViewHolder>() {}
 ```  
   
 2. Update `onCreateViewHolder()`:  
- * Change the signature of `onCreateViewHolder()` to return the `ViewHolder`.  
- * Change the layout inflator to use the correct layout resource, `list_item_sleep_night`_._  
- * Remove the cast to `TextView`.  
- * Instead of returning a `TextItemViewHolder`, return a `ViewHolder`.  
+  
+* Change the signature of `onCreateViewHolder()` to return the `ViewHolder`.  
+  
+* Change the layout inflator to use the correct layout resource, `list_item_sleep_night`_._  
+  
+* Remove the cast to `TextView`.  
+  
+* Instead of returning a `TextItemViewHolder`, return a `ViewHolder`.    
  Here is the finished updated `onCreateViewHolder()` function:  
   
 ```kotlin  
@@ -475,35 +515,39 @@ override fun onCreateViewHolder(
 ```  
   
 3. Update `onBindViewHolder()`:  
- * Change the signature of `onBindViewHolder()` so that the `holder` parameter is a `ViewHolder` instead of a `TextItemViewHolder`.  
- * Inside `onBindViewHolder()`, delete all the code, except for the definition of `item`.  
- * Define a `val` `res` that holds a reference to the `resources` for this view.  
+  
+* Change the signature of `onBindViewHolder()` so that the `holder` parameter is a `ViewHolder` instead of a `TextItemViewHolder`.  
+  
+* Inside `onBindViewHolder()`, delete all the code, except for the definition of `item`.  
+  
+* Define a `val` `res` that holds a reference to the `resources` for this view.  
   
 ```kotlin  
 val res = holder.itemView.context.resources  
 ```  
   
- * Set the text of the `sleepLength` text view to the duration. Copy the code below, which calls a formatting function that's provided with the starter code.  
+* Set the text of the `sleepLength` text view to the duration. Copy the code below, which calls a formatting function that's provided with the starter code.  
   
 ```kotlin  
 holder.sleepLength.text = convertDurationToFormatted(item.startTimeMilli, item.endTimeMilli, res)  
 ```  
   
- * This gives an error, because `convertDurationToFormatted()` needs to be defined. Open `Util.kt` and uncomment the code and associated imports for it. (Select **Code > Comment with Line comments**.)  
- * Back in `onBindViewHolder()`, use `convertNumericQualityToString()` to set the quality.  
+* This gives an error, because `convertDurationToFormatted()` needs to be defined. Open `Util.kt` and uncomment the code and associated imports for it. (Select **Code > Comment with Line comments**.)  
+  
+* Back in `onBindViewHolder()`, use `convertNumericQualityToString()` to set the quality.  
   
 ```kotlin  
 holder.quality.text= convertNumericQualityToString(item.sleepQuality, res)  
 ```  
   
- * You may need to manually import these functions.  
+* You may need to manually import these functions.  
   
 ```kotlin  
 import com.example.android.trackmysleepquality.convertDurationToFormatted  
 import com.example.android.trackmysleepquality.convertNumericQualityToString  
 ```  
   
- * Set the correct icon for the quality. The new `ic_sleep_active` icon is provided for you in the starter code.  
+* Set the correct icon for the quality. The new `ic_sleep_active` icon is provided for you in the starter code.  
   
 ```kotlin  
 holder.qualityImage.setImageResource(when (item.sleepQuality) {  
@@ -610,7 +654,7 @@ The `onCreateViewHolder()` method in the adapter currently inflates the view fro
 2. Put the cursor on the function name `from`. Press `Alt+Enter` (`Option+Enter` on a Mac) to open the intention menu. Select **Move to companion object**. The `from()` function needs to be in a companion object so it can be called on the `ViewHolder` class, not called on a `ViewHolder` instance.  
 3. Move the `companion` object into the `ViewHolder` class.  
 4. Make `from()` public.  
-5. In `onCreateViewHolder()`, change the `return` statement to return the result of calling `from()` in the `ViewHolder` class.   
+5. In `onCreateViewHolder()`, change the `return` statement to return the result of calling `from()` in the `ViewHolder` class.  
   
 Your completed `onCreateViewHolder()` and `from()` methods should look like the code below, and your code should build and run without errors.  
   
@@ -640,9 +684,13 @@ class ViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(i
 ### Improving Data Refresh  
   
 Here is a recap of using `RecyclerView` with the adapter pattern to display sleep data to the user.  
+  
 * From user input, the app creates a list of `SleepNight` objects. Each `SleepNight` object represents a single night of sleep, its duration, and quality.  
+  
 * The `SleepNightAdapter` adapts the list of `SleepNight` objects into something `RecyclerView` can use and display.  
+  
 * The `SleepNightAdapter` adapter produces `ViewHolders` that contain the views, data, and meta information for the recycler view to display the data.  
+  
 * `RecyclerView` uses the `SleepNightAdapter` to determine how many items there are to display (`getItemCount()`). `RecyclerView` uses `onCreateViewHolder()` and `onBindViewHolder()` to get view holders bound to data for displaying.  
   
 #### The [notifyDataSetChanged()](https://developer.android.com/reference/android/widget/BaseAdapter.html#notifyDataSetChanged()) method is inefficient  
@@ -672,6 +720,7 @@ Once `DiffUtil` figures out what has changed, `RecyclerView` can use that inform
 ***  
   
 ### Refresh Data with [DiffUtil](https://developer.android.com/reference/android/support/v7/util/DiffUtil)  
+  
 #### Step 1: Implement `SleepNightDiffCallback`  
   
 In order to use the functionality of the `DiffUtil` class, extend `DiffUtil.ItemCallback`.  
@@ -683,9 +732,9 @@ In order to use the functionality of the `DiffUtil` class, extend `DiffUtil.Item
 class SleepNightDiffCallback : DiffUtil.ItemCallback<SleepNight>() {}  
 ```  
   
-3. Put the cursor in the `SleepNightDiffCallback` class name. Press `Alt+Enter` (`Option+Enter` on Mac) and select **Implement Members**. In the dialog that opens, shift-left-click to select the `areItemsTheSame()` and `areContentsTheSame()` methods, then click **OK**.   
+3. Put the cursor in the `SleepNightDiffCallback` class name. Press `Alt+Enter` (`Option+Enter` on Mac) and select **Implement Members**. In the dialog that opens, shift-left-click to select the `areItemsTheSame()` and `areContentsTheSame()` methods, then click **OK**.    
  This generates stubs inside `SleepNightDiffCallback` for the two methods, as shown below. `DiffUtil` uses these two methods to figure out how the list and items have changed.  
-   
+  
 ```kotlin  
 override fun areItemsTheSame(oldItem: SleepNight, newItem: SleepNight): Boolean {  
  TODO("not implemented") //To change body of created functions use File | Settings | File Templates.  
@@ -774,7 +823,6 @@ sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
   
 With data binding, we can easily observe and show the data to the UI from a data source.  
   
-  
 #### Step 1: Add data binding to the layout file  
   
 1. Open the `list_item_sleep_night.xml` layout file in the **Text** tab.  
@@ -800,6 +848,7 @@ With data binding, we can easily observe and show the data to the UI from a data
 ```kotlin  
 val view = layoutInflater.inflate(R.layout.list_item_sleep_night, parent, false)  
 ```  
+  
 2. Where the `view` variable was, define a new variable called `binding` that inflates the `ListItemSleepNightBinding` binding object, as shown below. Make the necessary import of the binding object.  
   
 ```kotlin  
@@ -872,6 +921,7 @@ companion object {
 ```  
   
 #### Step 4: Create [binding adapters](https://developer.android.com/topic/libraries/data-binding)  
+  
 In a previous lesson, you used the [`Transformations`](https://developer.android.com/reference/android/arch/lifecycle/Transformations) class to take `LiveData` and generate formatted strings to display in text views. However, if you need to bind different types, or complex types, you can provide binding adapters to help data binding use those types. Binding adapters are adapters that take your data and adapt it into something that data binding can use to bind a view, like text or an image.  
   
 You are going to implement three binding adapters, one for the quality image, and one for each text field. In summary, to declare a binding adapter, you define a method that takes an item and a view, and annotate it with `@BindingAdapter`. In the body of the method, you implement the transformation. In Kotlin, you can write a binding adapter as an extension function on the view class that receives the data.  
@@ -937,6 +987,7 @@ fun bind(item: SleepNight) {
 ```  
   
 #### Step 6: Add bindings to XML layout  
+  
 1. Open `list_item_sleep_night.xml`. In the `ImageView`, add an `app` property with the same name as the binding adapter that sets the image. Pass in the `sleep` variable, as shown below. This property creates the connection between the view and the binding object, via the adapter. Whenever `sleepImage` is referenced, the adapter will adapt the data from the `SleepNight`.  
   
 ```xml  
@@ -975,7 +1026,7 @@ app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
   
 Another common use case is needing to show a lot of data to the user, which you can do using `GridLayout`. The `GridLayoutManager` for `RecyclerView` lays out the data as a scrollable grid, as shown below.  
   
-![GridLayout.png](../../../GridLayout.png)  
+![GridLayout.png](../../../assets/img/GridLayout.png)  
   
 From a design perspective, `GridLayout` is best for lists that can be represented as icons or images, such as lists within a photo browsing app. In the sleep-tracker app, you could show each night of sleep as a grid of large icons. This design would give the user an overview of their sleep quality at a glance.  
   
@@ -987,8 +1038,9 @@ In the first two examples shown below, each row is made up of three spans. By de
   
 By default, each item takes up one span, but you can make an item wider by specifying how many spans it is to occupy. For example, the top item in the rightmost screen (shown below) takes up three spans.  
   
-**Tip:**   
->_Span_ can mean either "row" or "column." With [`GridLayoutManager`](https://developer.android.com/reference/android/support/v7/widget/GridLayoutManager), you use `spanCount` to indicate how many columns or rows a grid has, and also how much grid space an item takes up horizontally or vertically.  
+**Tip:**  
+  
+>_Span_ can mean either "row" or "column." With [`GridLayoutManager`](https://developer.android.com/reference/android/support/v7/widget/GridLayoutManager), you use `spanCount` to indicate how many columns or rows a grid has, and also how much grid space an item takes up horizontally or vertically.    
 > When you create a `GridLayoutManager`, you specify the orientation separately from the number of spans, and "span" is "direction-agnostic." In a (default) vertical configuration, "span" and "column" are equivalent.  
   
 ***  
@@ -1105,12 +1157,15 @@ Receiving clicks and handling them is a two-part task: First, you need to listen
 So, what is the best place for adding a click listener for this app?  
   
 * The `SleepTrackerFragment` hosts many views, and so listening to click events at the fragment level won't tell you which item was clicked. It won't even tell you whether it was an item that was clicked or one of the other UI elements.  
+  
 * Listening at the `RecyclerView` level, it's hard to figure out exactly what item in the list the user clicked on.  
+  
 * The best pace to get information about one clicked item is in the `ViewHolder` object, since it represents one list item.  
   
 While the `ViewHolder` is a great place to listen for clicks, it's not usually the right place to handle them. So, what is the best place for handling the clicks?  
   
 * The `Adapter` displays data items in views, so you could handle clicks in the adapter. However, the adapter's job is to adapt data for display, not deal with app logic.  
+  
 * You should usually handle clicks in the `ViewModel`, because the `ViewModel` has access to the data and logic for determining what needs to happen in response to the click.  
   
 **Tip:** There are other patterns for implementing click listeners in `RecyclerViews`, but the one you work with in this lesson is easier to explain and more straightforward to implement. As you work on Android apps, you'll encounter different patterns for using click listeners in `RecyclerViews`. All the patterns have their advantages.  
@@ -1149,7 +1204,7 @@ android:onClick="@{() -> clickListener.onClick(sleep)}"
   
 #### Step 2: Pass the click listener to the view holder and the binding object  
   
-1. Open **SleepNightAdapter.kt.** Modify the constructor of the `SleepNightAdapter` class to receive a `val clickListener: SleepNightListener`. When the adapter binds the `ViewHolder`, it will need to provide it with this click listener.  
+1. Open **SleepNightAdapter.kt.** Modify the constructor of the `SleepNightAdapter` class to receive a `val clickListener: SleepNightListener`. When the adapter binds the `ViewHolder`, it will need to provide it with this click listener.    
   
 ```kotlin  
 class SleepNightAdapter(val clickListener: SleepNightListener):       ListAdapter<SleepNight, SleepNightAdapter.ViewHolder>(SleepNightDiffCallback()) {{}}  
@@ -1199,7 +1254,7 @@ Before starting, open `fragment_sleep_detail.xml` and uncomment the code inside 
   
 In this step, instead of just displaying a toast, you change the click listener lambda in `onCreateView()` of the `SleepTrackerFragment` to pass the `nightId` to the `SleepTrackerViewModel` and trigger navigation to the `SleepDetailFragment`.  
   
-##### Define the click handler function:  
+##### Define the click handler function  
   
 1. Open **SleepTrackerViewModel.kt**. Inside `SleepTrackerViewModel`, towards the end, define the `onSleepNightClicked()`click handler function.  
 2. Inside the `onSleepNightClicked()`, trigger navigation by setting `_navigateToSleepDetail` to the passed in `id` of the clicked sleep night.  
@@ -1226,7 +1281,7 @@ fun onSleepDetailNavigated() {
 }  
 ```  
   
-##### Add the code to call the click handler:  
+##### Add the code to call the click handler  
   
 1. Open **SleepTrackerFragment.kt** and scroll down to the code that creates the adapter and defines `SleepNightListener` to show a toast.  
   
@@ -1242,7 +1297,7 @@ val adapter = SleepNightAdapter(SleepNightListener { nightId ->
 sleepTrackerViewModel.onSleepNightClicked(nightId)  
 ```  
   
-##### Add the code to observe clicks:  
+##### Add the code to observe clicks  
   
 Open **SleepTrackerFragment.kt**. In `onCreateView()`, right above the declaration of `manager`, add code to observe the new `navigateToSleepDetail` `LiveData`. When `navigateToSleepDetail` changes, navigate to the `SleepDetailFragment`, passing in the `night`, then call `onSleepDetailNavigated()` afterwards. Since you ‘ve done this before in a previous lesson, here is the code:  
   
@@ -1258,7 +1313,7 @@ sleepTrackerViewModel.navigateToSleepDetail.observe(this, Observer { night ->
   
 ```  
   
-##### Handle null values in the binding adapters:  
+##### Handle null values in the binding adapters  
   
 1. Run the app again, in debug mode. Tap an item, and filter the logs to show Errors. It will show a stack trace including something like what's below.  
   
@@ -1270,7 +1325,7 @@ Caused by: java.lang.IllegalArgumentException: Parameter specified as non-null i
   
 * However, it turns out that with this new click-handling mechanism, it is now possible for the binding adapters to get called with a `null` value for `item`. In particular, when the app starts, the `LiveData` starts as `null`, so you need to add null checks to each of the adapters.  
   
-2. In `BindingUtils.kt`, for each of the binding adapters, change the type of the `item` argument to nullable, and wrap the body with `item?.let{...}`. For example, your adapter for `sleepQualityString` will look like this. Change the other adapters likewise.  
+2. In `BindingUtils.kt`, for each of the binding adapters, change the type of the `item` argument to nullable, and wrap the body with `item?.let{…}`. For example, your adapter for `sleepQualityString` will look like this. Change the other adapters likewise.  
   
 ```kotlin  
 @BindingAdapter("sleepQualityString")  
@@ -1293,25 +1348,25 @@ One common example is having headers in your list or grid. A list can have a sin
   
 In `RecyclerView`, every item in the list corresponds to an index number starting from 0. For example:  
   
-**\[Actual Data\] -> \[Adapter Views\]**  
-\[0: SleepNight\] -> \[0: SleepNight\]  
-\[1: SleepNight\] -> \[1: SleepNight\]  
+**\[Actual Data\] -> \[Adapter Views\]**    
+\[0: SleepNight\] -> \[0: SleepNight\]    
+\[1: SleepNight\] -> \[1: SleepNight\]    
 \[2: SleepNight\] -> \[2: SleepNight\]  
   
 One way to add headers to a list is to modify your adapter to use a different `ViewHolder` by checking indexes where your header needs to be shown. The `Adapter` will be responsible for keeping track of the header. For example, to show a header at the top of the table, you need to return a different `ViewHolder` for the header while laying out the zero-indexed item. Then all the other items would be mapped with the header offset, as shown below.  
   
-**\[Actual Data\] -> \[Adapter Views\]**  
-**\[0: Header\]**  
-\[0: SleepNight\] -> \[1: SleepNight\]  
-\[1: SleepNight\] -> \[2: SleepNight\]  
+**\[Actual Data\] -> \[Adapter Views\]**    
+**\[0: Header\]**    
+\[0: SleepNight\] -> \[1: SleepNight\]    
+\[1: SleepNight\] -> \[2: SleepNight\]    
 \[2: SleepNight\] -> \[3: SleepNight.  
   
 Another way to add headers is to modify the backing dataset for your data grid. Since all the data that needs to be displayed is stored in a list, you can modify the list to include items to represent a header. This is a bit simpler to understand, but it requires you to think about how you design your objects, so you can combine the different item types into a single list. Implemented this way, the adapter will display the items passed to it. So the item at position 0 is a header, and the item at position 1 is a `SleepNight`, which maps directly to what's on the screen.  
   
-**\[Actual Data\] -> \[Adapter Views\]**  
-**\[0: Header\] -> \[0: Header\]**  
-\[1: SleepNight\] -> \[1: SleepNight\]  
-\[2: SleepNight\] -> \[2: SleepNight\]  
+**\[Actual Data\] -> \[Adapter Views\]**    
+**\[0: Header\] -> \[0: Header\]**    
+\[1: SleepNight\] -> \[1: SleepNight\]    
+\[2: SleepNight\] -> \[2: SleepNight\]    
 \[3: SleepNight\] -> \[3: SleepNight\]  
   
 Each methodology has benefits and drawbacks. Changing the dataset doesn't introduce much change to the rest of the adapter code, and you can add header logic by manipulating the list of data. On the other hand, using a different `ViewHolder` by checking indexes for headers gives more freedom on the layout of the header. It also lets the adapter handle how data is adapted to the view without modifying the backing data.  
@@ -1326,9 +1381,9 @@ In this lesson, you update your `RecyclerView` to display a header at the start 
   
 To abstract the type of item and let the adapter just deal with "items", you can create a data holder class that represents either a `SleepNight` or a `Header`. Your dataset will then be a list of data holder items.  
   
-1. Open **SleepNightAdapter.kt**. Below the `SleepNightListener` class, at the top level, define a `sealed` class called `DataItem` that represents an item of data.   
-   
-**Note:**  
+1. Open **SleepNightAdapter.kt**. Below the `SleepNightListener` class, at the top level, define a `sealed` class called `DataItem` that represents an item of data.  
+  
+**Note:**    
 A `sealed` class defines a closed type, which means that all subclasses of `DataItem` must be defined in this file. As a result, the number of subclasses is known to the compiler. It's not possible for another part of your code to define a new type of `DataItem` that could break your adapter.  
   
 ```kotlin  
@@ -1421,8 +1476,8 @@ Next you need to update the declaration of `SleepNightAdapter`. Instead of only 
   
 ##### Define the types of items  
   
-1. In `SleepNightAdapter.kt`, at the top level, below the `import` statements and above `SleepNightAdapter`, define two constants for the view types.   
-   
+1. In `SleepNightAdapter.kt`, at the top level, below the `import` statements and above `SleepNightAdapter`, define two constants for the view types.  
+  
 The `RecyclerView` will need to distinguish each item's view type, so that it can correctly assign a view holder to it.  
   
 ```kotlin  
@@ -1474,7 +1529,6 @@ override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.
   
 1. Change the parameter type of `onBindViewHolder()` from `ViewHolder` to `RecyclerView.ViewHolder`.  
   
-  
 ```kotlin  
 override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int)  
 ```  
@@ -1519,7 +1573,6 @@ fun addHeaderAndSubmitList(list: List<SleepNight>?) {}
   
 2. Inside `addHeaderAndSubmitList()`, if the passed in list is `null`, return just a header, otherwise, attach the header to the head of the list, and then submit the list.  
   
-  
 ```kotlin  
 val items = when (list) {  
  null -> listOf(DataItem.Header)  
@@ -1533,6 +1586,7 @@ submitList(items)
 There are two things that need to be fixed for this app. One is visible, and one is not.  
   
 * The header shows up in the top-left corner, and is not easily distinguishable.  
+  
 * It doesn't matter much for a short list with one header, but you should not do list manipulation in `addHeaderAndSubmitList()` on the UI thread. Imagine a list with hundreds of items, multiple headers, and logic to decide where items need to be inserted. This work belongs in a coroutine.  
   
 Change `addHeaderAndSubmitList()` to use coroutines:  
@@ -1609,18 +1663,27 @@ android:background="@color/colorAccent"
 ### Summary of Adding Headers  
   
 * A _header_ is generally an item that spans the width of a list and acts as a title or separator. A list can have a single header to describe the item content, or multiple headers to group items and separate items from each other.  
+  
 * A `RecyclerView` can use multiple view holders to accommodate a heterogeneous set of items; for example, headers and list items.  
+  
 * One way to add headers is to modify your adapter to use a different `ViewHolder` by checking indexes where your header needs to be shown. The `Adapter` is responsible for keeping track of the header.  
+  
 * Another way to add headers is to modify the backing dataset (the list) for your data grid, which is what you did in this lesson.  
   
 These are the major steps for adding a header:  
   
 * Abstract the data in your list by creating a `DataItem` that can hold a header or data.  
+  
 * Create a view holder with a layout for the header in the adapter.  
+  
 * Update the adapter and its methods to use any kind of `RecyclerView.ViewHolder`.  
+  
 * In `onCreateViewHolder()`, return the correct type of view holder for the data item.  
+  
 * Update `SleepNightDiffCallback` to work with the `DataItem` class.  
+  
 * Create a `addHeaderAndSubmitList()` function that uses coroutines to add the header to the dataset and then calls `submitList()`.  
+  
 * Implement `GridLayoutManager.SpanSizeLookup()` to make only the header three spans wide.  
   
 ***  
@@ -1630,8 +1693,11 @@ These are the major steps for adding a header:
 #### RecyclerView fundamentals  
   
 * Displaying a list or grid of data is one of the most common UI tasks in Android. `RecyclerView` is designed to be efficient even when displaying extremely large lists.  
+  
 * `RecyclerView` does only the work necessary to process or draw items that are currently visible on the screen.  
+  
 * When an item scrolls off the screen, its views are recycled. That means the item is filled with new content that scrolls onto the screen.  
+  
 * The [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern) in software engineering helps an object work together with another API. `RecyclerView` uses an adapter to transform app data into something it can display, without the need for changing how the app stores and processes data.  
   
 To display your data in a `RecyclerView`, you need the following parts:  
@@ -1643,12 +1709,12 @@ To display your data in a `RecyclerView`, you need the following parts:
 **LayoutManager**  
   
 A `RecyclerView` uses a `LayoutManager` to organize the layout of the items in the `RecyclerView`, such as laying them out in a grid or in a linear list.    
-        
+  
 In the `<RecyclerView>` in the layout file, set the `app:layoutManager` attribute to the layout manager (such as `LinearLayoutManager` or `GridLayoutManager`).    
-        
+  
 You can also set the `LayoutManager` for a `RecyclerView` programmatically. (This technique is covered in a later codelab.)    
-      
-**Layout for each item **  
+  
+**Layout for each item**  
   
 Create a layout for one item of data in an XML layout file.  
   
@@ -1666,7 +1732,9 @@ The adapter requires you to implement the following methods:
 **ViewHolder**  
   
 A `ViewHolder` contains the view information for displaying one item from the item's layout.  
+  
 * The `onBindViewHolder()` method in the adapter adapts the data to the views. You always override this method. Typically, `onBindViewHolder()` inflates the layout for an item, and puts the data in the views in the layout.  
+  
 * Because the `RecyclerView` knows nothing about the data, the `Adapter` needs to inform the `RecyclerView` when that data changes. Use `notifyDataSetChanged()`to notify the `Adapter` that the data has changed.  
   
 #### DiffUtil and data binding with RecyclerView  
@@ -1674,12 +1742,15 @@ A `ViewHolder` contains the view information for displaying one item from the it
 **DiffUtil**:  
   
 * `RecyclerView` has a class called `DiffUtil` which is for calculating the differences between two lists.  
+  
 * `DiffUtil` has a class called `ItemCallBack` that you extend in order to figure out the difference between two lists.  
+  
 * In the `ItemCallback` class, you must override the `areItemsTheSame()` and `areContentsTheSame()` methods.  
   
 **ListAdapter**:  
   
 * To get some list management for free, you can use the `ListAdapter` class instead of `RecyclerView.Adapter`. However, if you use `ListAdapter` you have to write your own adapter for other layouts, which is why this codelab shows you how to do it.  
+  
 * To open the intention menu in Android Studio, place the cursor on any item of code and press `Alt+Enter` (`Option+Enter` on a Mac). This menu is particularly helpful for refactoring code and creating stubs for implementing methods. The menu is context-sensitive, so you need to place cursor exactly to get the correct menu.  
   
 **Data binding**:  
@@ -1689,6 +1760,7 @@ A `ViewHolder` contains the view information for displaying one item from the it
 **Binding adapters**:  
   
 * You previously used `Transformations` to create strings from data. If you need to bind data of different or complex types, provide binding adapters to help data binding use them.  
+  
 * To declare a binding adapter, define a method that takes an item and a view, and annotate the method with `@BindingAdapter`. In Kotlin, you can write the binding adapter as an extension function on the `View`. Pass in the name of the property that the adapter adapts. For example:  
   
 ```xml  
@@ -1704,12 +1776,19 @@ A `ViewHolder` contains the view information for displaying one item from the it
 #### GridLayout with RecyclerView  
   
 * Layout managers manage how the items in the `RecyclerView` are arranged.  
+  
 * `RecyclerView` comes with out-of-the-box layout managers for common use cases such as `LinearLayout` for horizontal and vertical lists, and `GridLayout` for grids.  
+  
 * For more complicated use cases, implement a custom `LayoutManager`.  
+  
 * From a design perspective, `GridLayout` is best used for lists of items that can be represented as icons or images.  
+  
 * `GridLayout` arranges items in a grid of rows and columns. Assuming vertical scrolling, each item in a row takes up what's called a "span."  
+  
 * You can customize how many spans an item takes up, creating more interesting grids without the need for a custom layout manager.  
+  
 * Create an item layout for one item in the grid, and the layout manager takes care of arranging the items.  
+  
 * You can set the `LayoutManager` for the `RecyclerView` either in the XML layout file that contains the `<RecyclerView>` element, or programmatically.  
   
 #### Interacting with RecyclerView items  
@@ -1760,16 +1839,25 @@ val adapter = SleepNightAdapter(SleepNightListener { nightId ->
 #### Headers in RecyclerView  
   
 * A _header_ is generally an item that spans the width of a list and acts as a title or separator. A list can have a single header to describe the item content, or multiple headers to group items and separate items from each other.  
+  
 * A `RecyclerView` can use multiple view holders to accommodate a heterogeneous set of items; for example, headers and list items.  
+  
 * One way to add headers is to modify your adapter to use a different `ViewHolder` by checking indexes where your header needs to be shown. The `Adapter` is responsible for keeping track of the header.  
+  
 * Another way to add headers is to modify the backing dataset (the list) for your data grid, which is what you did in this codelab.  
   
 These are the major steps for adding a header:  
   
 * Abstract the data in your list by creating a `DataItem` that can hold a header or data.  
+  
 * Create a view holder with a layout for the header in the adapter.  
+  
 * Update the adapter and its methods to use any kind of `RecyclerView.ViewHolder`.  
+  
 * In `onCreateViewHolder()`, return the correct type of view holder for the data item.  
+  
 * Update `SleepNightDiffCallback` to work with the `DataItem` class.  
+  
 * Create a `addHeaderAndSubmitList()` function that uses coroutines to add the header to the dataset and then calls `submitList()`.  
-* Implement `GridLayoutManager.SpanSizeLookup()` to make only the header three spans wide.
+  
+* Implement `GridLayoutManager.SpanSizeLookup()` to make only the header three spans wide.  
