@@ -2,7 +2,8 @@
 title: yshalsager's Digital Garden 🪴
 ---
 
-- [All Notes](/notes)
-- [Programming Notes](/notes/programming)
+- [All Notes](/en/notes/)
+- [Programming Notes](/en/notes/programming)
 - [Tags](/tags)
-- [Arabic Notes](https://notes.yshalsager.com/ar/)
+- [Blog](https://yshalsager.com/en/)
+- [Arabic Notes](/ar/)
