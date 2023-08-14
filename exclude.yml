@@ -1,0 +1,10 @@
+folder:
+  - _Archive
+  - Ressource
+files:
+  - index
+  - CNAME
+  - README
+  - tag
+  - tags
+  - overrides/partials/comments.html
