@@ -7,4 +7,5 @@ files:
   - README
   - tag
   - tags
+  - tags.md
   - overrides/partials/comments.html
