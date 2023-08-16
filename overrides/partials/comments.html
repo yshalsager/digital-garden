@@ -6,21 +6,20 @@
 {% if comments %}
     <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 
-    <script src="https://giscus.app/client.js"
-        data-repo="yshalsager/digital-garden"
-        data-repo-id="R_kgDOH3eHnQ"
-        data-category="General"
-        data-category-id="DIC_kwDOH3eHnc4CQ_aG"
+    <script
+        src="https://giscus.app/client.js"
+        data-repo="<username>/<repository>"
+        data-repo-id="..."
+        data-category="..."
+        data-category-id="..."
         data-mapping="pathname"
-        data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="dark_dimmed"
+        data-theme="light"
         data-lang="en"
-        data-loading="lazy"
         crossorigin="anonymous"
-        async>
+        async
+    >
     </script>
 
     <!--- generate the script using https://giscus.app/ and replace the text above ! --->
@@ -34,10 +33,6 @@
             var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light"
             giscus.setAttribute("data-theme", theme)
         }
-
-        /* Set language */
-        giscus.setAttribute("data-lang", window.location.pathname.includes("/en/") ? "en" : "ar");
-
 
         /* Register event handlers after documented loaded */
         document.addEventListener("DOMContentLoaded", function () {
