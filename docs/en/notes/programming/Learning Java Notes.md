@@ -1,7 +1,7 @@
 ---  
 title: Learning Java Notes  
-created: 2021-12-16 08:53  
-updated: 2021-12-16 10:46  
+created: 2021-12-16 08:53:00  
+updated: 2021-12-16 10:46:00  
 share: true  
 website: en/notes/programming  
 ---  
@@ -12,9 +12,9 @@ website: en/notes/programming
   
 ```java  
 public class Main {  
-	public static void main(String[] args) {  
-		System.out.println("Hello World! It's me!");  
-	}  
+ public static void main(String[] args) {  
+  System.out.println("Hello World! It's me!");  
+ }  
 }  
 ```  
   
@@ -81,13 +81,13 @@ public class Main {
   
 ```java  
 if (inputtedNum < 100) {  
-	int favoriteNumber = 5;  
-	System.out.println(favoriteNumber);  
-	favoriteNumber = 10;  
-	System.out.println(favoriteNumber);  
-	// In scope (accessible) for favoriteNumber  
+ int favoriteNumber = 5;  
+ System.out.println(favoriteNumber);  
+ favoriteNumber = 10;  
+ System.out.println(favoriteNumber);  
+ // In scope (accessible) for favoriteNumber  
 } else {  
-	// Out of scope (not accessible) for favoriteNumber  
+ // Out of scope (not accessible) for favoriteNumber  
 }  
 // Out of scope (not accessible) for favoriteNumber  
 ```  
@@ -97,13 +97,13 @@ String favoriteFood = "pizza";
 // In scope (accessible) for favoriteFood  
 System.out.println(favoriteFood);  
 if (inputtedNum < 100) {  
-	// In scope (accessible) for favoriteFood  
-	favoriteFood = "chicken tacos"”;  
-	System.out.println(favoriteFood);  
+ // In scope (accessible) for favoriteFood  
+ favoriteFood = "chicken tacos"”;  
+ System.out.println(favoriteFood);  
 } else {  
-	// In scope (accessible) for favoriteFood  
-	favoriteFood = "steak";  
-	System.out.println(favoriteFood);  
+ // In scope (accessible) for favoriteFood  
+ favoriteFood = "steak";  
+ System.out.println(favoriteFood);  
 }  
 // In scope (accessible) for favoriteFood  
 ```  

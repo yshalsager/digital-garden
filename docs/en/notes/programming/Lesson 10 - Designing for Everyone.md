@@ -1,6 +1,6 @@
 ---  
-created: 2022-05-22 14:38  
-updated: 2022-06-20 18:25  
+created: 2022-05-22 14:38:00  
+updated: 2022-06-20 18:25:00  
 title: Lesson 10 - Designing for Everyone  
 share: true  
 website: en/notes/programming  
@@ -47,7 +47,7 @@ When Android styles a view, it applies a combination of themes, styles, and attr
 The screenshots below show the [GDG-finder app](https://github.com/udacity/andfun-kotlin-gdg-finder) with light theme (left) and a dark theme (right), as well as with a custom font and header sizes. This can be implemented in several ways, and you learn some of them in this lesson.  
   
  ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/eab9826ee090267a.png)  ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/80cc74df29081180.png)  
-   
+  
  ***  
   
 ### Design Through the Looking Glass  
@@ -56,7 +56,7 @@ The focus in this lesson is on one of the most important aspects of Android deve
   
 Compare the two screens below. Notice that by moving elements around and drawing focus to what's important, you can help the user understand what's going on. For simple screens, good design often means showing less. For screens with lots of important information, good design makes dense information understandable at a glance. As you work on Android Apps you may hear this concept called [information architecture](https://en.wikipedia.org/wiki/Information_architecture) (IA).  
   
- ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/50ba139460366f18.png)   ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/f2bb268d07be0e05.png)   
+ ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/50ba139460366f18.png)   ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/f2bb268d07be0e05.png)  
   
 Another level of design is building coherent user flows, or _use cases_, that let users accomplish tasks. This form of design is called [user experience design](https://en.wikipedia.org/wiki/User_experience_design) (UXD), and some designers specialize in it.  
   
@@ -90,6 +90,7 @@ Good design is the most important way to get users using your app.
 2. Change the size of the title and subtitle.  
   
 In `home_fragment.xml`, add `textSize` attributes to the `TextViews`. The subtitle should be smaller than the title.  
+  
 ```xml  
      <TextView  
            android:id="@+id/title"  
@@ -166,7 +167,7 @@ Android lets apps download fonts at runtime using the [Downloadable Fonts](https
 ![](https://developer.android.com/codelabs/kotlin-android-training-styles-and-themes/img/7251480f6dd43fd7.png)  
   
 14. Open `res/values/styles.xml` and examine the default `AppTheme` theme that was created for the project. It currently looks as shown below. To apply the new Lobster Two font to all the text, you'll need to update this theme.    
-      
+  
 15. In the `<style>` tag, notice the `parent` attribute. Every style tag can specify a parent and inherit all the parent's attributes. The code specifies the `Theme` defined by the Android libraries. The [`MaterialComponents`](https://material.io/develop/android/docs/theming-guide/) theme that specifies everything from how buttons work to how to draw toolbars. The theme has sensible defaults, so you can customize just the parts you want. The app uses the `Light` version of this theme without the action bar (`NoActionBar`), as you can see in the screenshot above.    
   
 ```xml  
@@ -220,7 +221,7 @@ The style has a parent, just as a theme can have a parent. But this time, instea
   
 ```xml  
 <item name="android:textSize">24sp</item>  
-<item name="android:textColor">#555555<_item>  
+<item name="android:textColor">#555555</item>  
 ```  
   
 4. Define another style for the subtitles. Name it `TextAppearance.Subtitle`.  
@@ -236,7 +237,7 @@ The style has a parent, just as a theme can have a parent. But this time, instea
 #### Step 2: Apply the style that you created  
   
 1. In `home_fragment.xml`, add the `TextAppearance`.`Title` style to the `title` text view. Delete the `textSize` and `textColor` attributes.    
-        
+  
     Themes override any `TextAppearance` styling that you set. (The pyramid diagram at the beginning of the codelab shows the order in which styling is applied.) Use the `textAppearance` property to apply the style as a `TextAppearance` so that the font set in the `Theme` overrides what you set here.  
   
 ```xml  
@@ -284,9 +285,9 @@ implementation 'com.google.android.material:material:1.2.0'
 ```  
   
 2. Open `res/layout/home_fragment.xml` and switch to the **Text** tab.    
-        
+  
     Currently, the home screen layout uses a single `ScrollView` with a `ConstraintLayout` as a child. If you added a FAB to the `ConstraintLayout`, the FAB would be inside the `ConstraintLayout`, not floating over all the content, and it would scroll with the rest of the content of the `ConstraintLayout`. You need a way to float the FAB above your current layout.    
-        
+  
     [`CoordinatorLayout`](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout) is a view group that lets you stack views on top of each other. While `CoordinatorLayout` doesn't have any fancy layout abilities, it is sufficient for this app. The `ScrollView` should take up the full screen, and the FAB should float near the bottom edge of the screen.  
   
 3. In `home_fragment.xml`, add a `CoordinatorLayout` around the `ScrollView`.  
@@ -391,7 +392,7 @@ binding.viewModel = viewModel
   
 6. To eliminate the error, clean and rebuild your project to update the binding object.  
 7. Also in `onCreateView()`, add an observer that navigates to the list of GDGs. Here is the code:    
-      
+  
 ```kotlin  
 viewModel.navigateToSearch.observe(viewLifecycleOwner,  
     Observer<Boolean> { navigate ->  
@@ -413,9 +414,9 @@ import androidx.lifecycle.Observer
 9. Run your app.  
 10. Tap the FAB and it takes you to the GDG list. If you are running the app on a physical device, you are asked for the location permission. If you are running the app in an emulator, you may see a blank page with the following message:    
     ![](https://developer.android.com/codelabs/kotlin-android-training-material-design-dimens-colors/img/a024bbdad6b8fc51.png)    
-        
+  
     If you get this message running on the emulator, make sure you are connected to the internet and have location settings turned on. Then open the Maps app to enable location services. You may also have to restart your emulator.  
-      
+  
 ***  
   
 ### Styling in a material world  
@@ -671,7 +672,8 @@ Note that this color scheme still has some accessibility warnings. Most color sc
 <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>  
 <item name="colorOnSecondary">@color/secondaryTextColor</item>  
 ```  
-7.  Run the app. This looks pretty good...  
+  
+7. Run the app. This looks pretty good...  
   
 ![](https://developer.android.com/codelabs/kotlin-android-training-material-design-dimens-colors/img/d5bc37efa248cafe.png)  
   
@@ -679,7 +681,7 @@ Note that this color scheme still has some accessibility warnings. Most color sc
 9. In `activity_main.xml`, find the `Toolbar`. In the `ImageView`, change the logo tint to `colorOnSecondary`.  
 10. Run the app.  
   
-##### Notes:  
+##### Notes  
   
 * `colorOnPrimary`: A color that passes accessibility guidelines for text and iconography when drawn on top of the primary color.  
 * `colorOnSecondary`: A color that passes accessibility guidelines for text and iconography when drawn on top of the secondary color.  
@@ -893,12 +895,13 @@ You should almost never grant a permission like this one, because the permission
 17. In your app, navigate to the **Apply for GDG** screen and scan it with the Accessibility Scanner app. This gives quite a few suggestions, as shown below on the left. 12, to be exact. To be fair, some of those are duplicates for similar items.  
 18. Click the "stack" ![804718d5989bce70.png](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/804718d5989bce70.png) icon in the bottom toolbar to get a list of all suggestions, as shown below on the right screenshot. You address all of these issues in this codelab.  
   
- ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/ac4eb1b2948b674b.png)   
- ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/88887a1afe7c61e9.png)  ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/134124a45c47dffd.png)   
-   
+ ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/ac4eb1b2948b674b.png)  
+ ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/88887a1afe7c61e9.png)  ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/134124a45c47dffd.png)  
+  
  ***  
-   
+  
 ### Design for TalkBack  
+  
 The [Android Accessibility Suite](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback), a collection of apps by Google, includes tools to help make apps more accessible. It includes tools such as TalkBack. TalkBack is a screen reader that offers auditory, haptic, and spoken feedback, which allows users to navigate and consume content on their devices without using their eyes.  
   
 It turns out TalkBack is not only used by blind people, but by many people who have visual impairments of some sort. Or even people who just want to rest their eyes!  
@@ -923,6 +926,7 @@ TalkBack comes pre-installed on many physical devices, but on an emulator, you n
 ***  
   
 ### Adding Content Descriptions  
+  
 Content descriptors are descriptive labels that explain the meaning of views. Most of your views should have content descriptions.  
   
 #### Step 1: Add a content description  
@@ -1088,10 +1092,10 @@ android:layout_width="wrap_content"android:layout_height="wrap_content"
 3. Delete the `textColor` attribute from `textViewIntro`. The theme colors should provide good contrast.  
 4. Run the app. Notice the much more usable **Submit** button. Click **Submit** and notice how it changes to **Done**.  
   
- ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/aa96e903f0d84f29.png)  ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/7b1eae8148504314.png)   
-   
+ ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/aa96e903f0d84f29.png)  ![](https://developer.android.com/codelabs/kotlin-android-training-design-for-everyone/img/7b1eae8148504314.png)  
+  
  ***  
-   
+  
 ### Using drawables  
   
 Android drawables let you draw images, shapes, and animations on the screen, and they can have a fixed size or be dynamically sized. You can use images as drawables, such as the images in the GDG app. And you can use vector drawings to draw anything you can imagine. There is also a resizable drawable called a [9-patch drawable](https://developer.android.com/guide/topics/graphics/drawables#nine-patch), that is not covered in this course. The GDG logo, in **drawable/ic_gdg.xml**, is another drawable.  
@@ -1305,7 +1309,7 @@ AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
   
 To customize the dark theme, create folders with the `-night` qualifier for the dark theme to use. For example, you can have specific colors in night mode by creating a folder called `values-night`.  
   
-1. Visit the [material.io color picker tool](https://material.io/tools/color/#!_) and create a night-theme color palette. For example, you could base it on a dark blue color.  
+1. Visit the [material.io color picker tool](https://material.io/tools/color/#!/) and create a night-theme color palette. For example, you could base it on a dark blue color.  
 2. Generate and download the **colors.xml** file.  
 3. Switch to **Project Files** view to list all the folders in your project.  
 4. Find the **res** folder and expand it.  
@@ -1335,6 +1339,7 @@ To customize the dark theme, create folders with the `-night` qualifier for the 
    <item name="android:textSize">18sp</item>  
 </style>  
 ```  
+  
 Using downloadable fonts makes fonts available to users without increasing the size of your APK. To add a downloadable font for a view:  
   
 1. Select the view in the **Design** tab, and select **More fonts** from the drop-down menu of the `fontFamily` attribute.  
@@ -1423,4 +1428,4 @@ android:background="?attr/colorPrimaryDark"
   
 * Use the `DayNight` `AppTheme` to support dark mode.  
 * You can set dark mode programmatically: `AppCompatDelegate.setDefaultNightMode()`  
-* Create a **res/values-night** resource folder to provide custom colors and values for dark mode.
+* Create a **res/values-night** resource folder to provide custom colors and values for dark mode.  
