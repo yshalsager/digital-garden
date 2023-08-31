@@ -1,6 +1,6 @@
 ---  
-created: 2022-05-16 20:59  
-updated: 2022-06-20 18:25  
+created: 2022-05-16 20:59:00  
+updated: 2022-06-20 18:25:00  
 title: HTML Essential Training  
 share: true  
 website: en/notes/programming  
@@ -13,15 +13,15 @@ tags:
 # HTML Essential Training  
   
 التكلفة:: 0  
-الحالة:: #مساق_مكتمل  
+الحالة:: #مساق/مكتمل  
 الرابط:: <https://www.linkedin.com/learning/html-essential-training-4>  
 المدة:: 2h45m  
-المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9)  
+المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9.md)  
 المنشيء:: Jen Simmons  
 المهام:: [HTML Essential Training 1](HTML%20Essential%20Training%201.md), [HTML Essential Training 2](HTML%20Essential%20Training%202.md)  
 الوصف:: Hypertext Markup Language (HTML) is the foundation of website and web application development. It allows you to ensure that your content is understood by both segments of your audience: the people who watch, read, or listen to your content, and the computers that display it. In this course, learn how to craft excellent HTML with the pieces that HTML itself has to offer. Instructor Jen Simmons highlights all of the fundamental concepts you need to use HTML thoughtfully. She focuses on semantic markup: tagging content as what it is, and not just for formatting, convention, or convenience. This has far-reaching impact for those who consume the web differently; it ensures that when a screen reader or a system (like a search engine) consumes a page, it knows exactly what it contains and how to categorize that information.  
-اﻷركان:: [التعلم](%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85)  
-اﻷهداف:: [LinkedIn Software Developer Path](LinkedIn%20Software%20Developer%20Path)  
+اﻷركان:: [التعلم](%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85.md)  
+اﻷهداف:: [LinkedIn Software Developer Path](LinkedIn%20Software%20Developer%20Path.md)  
 تاريخ اﻹنتهاء:: 2021-12-07  
 موصى به من؟:: كالبنيان المرصوص  
   
@@ -56,7 +56,7 @@ Hypertext Markup Language (HTML) is the foundation of website and web applicatio
      alt="shiny black dog looking pensive"  
      width="480" height="360"  
      srcset="<https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-960.jpg> 2x,  
-	   	  	   <https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1440.jpg> 3x, <https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1920.jpg> 4x">  
+           <https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1440.jpg> 3x, <https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-1920.jpg> 4x">  
 <!--  
 <img src="<https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/dog-480.jpg>"  
      alt="shiny black dog looking pensive"  
@@ -67,8 +67,6 @@ Hypertext Markup Language (HTML) is the foundation of website and web applicatio
      >  
   
 ```  
-  
-### Sizes  
   
 ```html  
 <img  
@@ -84,8 +82,6 @@ Hypertext Markup Language (HTML) is the foundation of website and web applicatio
   "  
 />  
 ```  
-  
-### Picture  
   
 ```html  
 <picture>  
@@ -173,8 +169,6 @@ Responsive pictures
   
 ```  
   
-## Audio  
-  
 ```html  
 <audio controls>  
   <source src="<http://example.com/birds.ogg>" type="audio/ogg; codec=opus" />  
@@ -183,8 +177,6 @@ Responsive pictures
 </audio>  
 ```  
   
-## Video  
-  
 ```html  
 <video controls>  
   <source src="<https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/moonwalk.480p.vp9.webm>" type="video/webm" />  
@@ -192,7 +184,7 @@ Responsive pictures
 </video>  
 ```  
   
-## Captions and subtitles  
+##  
   
 ```html  
 <video controls>  
