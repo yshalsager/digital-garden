@@ -1,6 +1,6 @@
 ---  
-created: 2022-05-16 20:59  
-updated: 2022-06-20 18:25  
+created: 2022-05-16 20:59:00  
+updated: 2022-06-20 18:25:00  
 title: Programming Foundations Databases  
 share: true  
 website: en/notes/programming  
@@ -14,16 +14,16 @@ tags:
 # Programming Foundations: Databases  
   
 التكلفة:: 0  
-الحالة:: #مساق_مكتمل  
-الرابط:: https://www.linkedin.com/learning/programming-foundations-databases-2  
+الحالة:: #مساق/مكتمل  
+الرابط:: <https://www.linkedin.com/learning/programming-foundations-databases-2>  
 المدة:: 1h25m  
-المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9), [Databases](Databases)  
+المعرفة:: [البرمجة](%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9.md), [Databases](Databases.md)  
 المنشيء:: Scott Simpson  
-المهام:: [Programming Foundations Databases 2](Programming%20Foundations%20Databases%202.md), [Programming Foundations Databases](Programming%20Foundations%20Databases), [Programming Foundations Databases](Programming%20Foundations%20Databases)  
+المهام:: [Programming Foundations Databases 2](Programming%20Foundations%20Databases%202.md), [Programming Foundations Databases](Programming%20Foundations%20Databases.md), [Programming Foundations Databases](Programming%20Foundations%20Databases.md)  
 الموضوع:: Databases  
 الوصف:: Once you get beyond basic programming, you'll need a database. Databases provide a consistent, organized structure for storing and retrieving large amounts of data. They allow programmers to build more complex applications that can take orders, process payments, make recommendations, authenticate users, and more. This course provides the foundation you need to get started in database programming. Explore the terminology: normal forms, ACID and CRUD, referential integrity, transactions, records, and tables. Learn what role keys and unique values play in a relational model. Discover how to design the best system to contain your data, starting with the tables and relationships at the core of your database. Find out how to write queries to extract the data you need, and how to juggle the different demands of storage, access, performance, and security. Instructor Scott Simpson provides practical examples and clear explanations that will help you design databases that can withstand the needs of your applications, your data, and your users.  
-اﻷركان:: [التعلم](%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85)  
-اﻷهداف:: [LinkedIn Software Developer Path](LinkedIn%20Software%20Developer%20Path), [Full Stack MERN Path](Full%20Stack%20MERN%20Path)  
+اﻷركان:: [التعلم](%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%85.md)  
+اﻷهداف:: [LinkedIn Software Developer Path](LinkedIn%20Software%20Developer%20Path.md), [Full Stack MERN Path](Full%20Stack%20MERN%20Path.md)  
 تاريخ اﻹنتهاء:: 2021-12-05  
 موصى به من؟:: كالبنيان المرصوص  
   
