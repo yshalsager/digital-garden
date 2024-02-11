@@ -1,9 +1,9 @@
 ---  
-created: 2022-06-05 09:45  
-updated: 2022-08-28 12:48  
+created: 2022-06-05 09:45:00  
+updated: 2022-08-28 12:48:00  
 title: برنامج Xournal++  
 share: true  
-website: ar/notes  
+website: ar/posts  
 tags:  
   - محتوى_منشور  
   - محتوى_تليجرام  
@@ -22,5 +22,5 @@ tags:
 يفيد في تدوين الفوائد على الكتب أو من خلال الكتابة بخط اليد  
   
 البرنامج مجاني ومفتوح المصدر ومتاح على أنظمة ويندوز ولينكس وماك  
-https://xournalpp.github.io/  
-https://github.com/xournalpp/xournalpp
+<https://xournalpp.github.io/>  
+<https://github.com/xournalpp/xournalpp>  
