@@ -5,6 +5,7 @@ title: Lesson 05 - App Architecture (UI Layer)
 share: true  
 website: en/notes/programming  
 ---  
+  
 ## Lesson 05: App Architecture (UI Layer)  
   
 > With Architecture Components you'll have the power to design even the  
