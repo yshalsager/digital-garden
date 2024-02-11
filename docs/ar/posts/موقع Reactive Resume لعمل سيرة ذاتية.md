@@ -1,9 +1,9 @@
 ---  
-created: 2022-03-20 20:55  
-updated: 2022-08-28 13:20  
+created: 2022-03-20 20:55:00  
+updated: 2022-08-28 13:20:00  
 title: موقع Reactive Resume لعمل سيرة ذاتية  
 share: true  
-website: ar/notes  
+website: ar/posts  
 tags:  
   - محتوى_منشور  
   - محتوى_تليجرام  

@@ -4,7 +4,7 @@ created: 2023-10-19 07:15:26
 updated: 2023-10-19 07:28:03  
 aliases:  
   - Change Battery mode and limit charging in Dell laptops on linux  
-المعرفة: "[Linux](Linux.md)"  
+المعرفة: "[[Linux]]"  
 share: true  
 website: en/notes  
 tags:  
@@ -22,5 +22,5 @@ tags:
 |   |   |  
 |---|---|  
 |**Valid Argument**|Standard, Express, PrimAcUse, Adaptive, Custom|  
-|**Description**|Configures the primary battery charging.<br><br>- Standard — Charges the battery over a longer period of time.<br>- Express — Charges the battery using the express charging algorithm, Dell's fast charging technology.<br>- PrimAcUse — Charges battery while plugged-in.<br>- Adaptive — Charges the battery based on a periodic evaluation of battery usage to deliver the best balance capacity.<br>- Custom — The battery charging starts and stops based on user input. The start value range should be 50-95 percent, the stop value range should be 55-100 percent, and the difference between the start and stop values should be greater than or equal to 5.|  
+|**Description**|Configures the primary battery charging.<br><br>- Standard — Charges the battery over a longer period of time.<br>- Express — Charges the battery using the express charging algorithm, Dell's fast charging technology.<br>- PrimAcUse — Charges battery while plugged-in.<br>- Adaptive — Charges the battery based on a periodic evaluation of battery usage to deliver the best balance capacity.<br>- Custom — The battery charging starts and stops based on user input. The start value range should be 50-95 percent, the stop value range should be 55-100 percent, and the difference between the start and stop values should be greater than or equal to 5. |  
 |**Example**|C:\>cctk --PrimaryBattChargeCfg=Standard<br>PrimaryBattChargeCfg=Standard<br>C:\>cctk --PrimaryBattChargeCfg=Custom:50-70<br>PrimaryBattChargeCfg=Custom:50-70<br><br>- NOTE: The format to set custom option is custom:start value-stop value. The start value range must be 50–95 percentage and the stop value range must be 55–100 percentage. The difference between the start and stop values must be greater than or equal to 5.|  

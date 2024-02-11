@@ -6,6 +6,7 @@ share: true
 website: en/notes/programming  
 ---  
   
+  
 ## Lesson 07: [RecyclerView](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView)  
   
 > Everything is better in a list! Recycler View has been - and continues to be - an essential component of any app design. This lesson is all about making your [app](https://github.com/udacity/andfun-kotlin-sleep-tracker-with-recyclerview) better with Recycler Views.  

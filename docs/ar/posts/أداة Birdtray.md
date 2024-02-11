@@ -1,9 +1,9 @@
 ---  
-created: 2022-07-07 13:16  
-updated: 2022-08-28 12:48  
+created: 2022-07-07 13:16:00  
+updated: 2022-08-28 12:48:00  
 title: أداة Birdtray  
 share: true  
-website: ar/notes  
+website: ar/posts  
 tags:  
   - محتوى_منشور  
   - محتوى_تليجرام  
@@ -15,7 +15,7 @@ tags:
   
 ---  
   
-إذا كنت تستخدم برنامج Thunderbird (https://www.thunderbird.net/) للبريد الإلكتروني على نظام لينكس، فأداة Birdtray ممتازة لإبقاء البرنامج مفتوحا في الخلفية.  
-https://github.com/gyunaev/birdtray  
+إذا كنت تستخدم برنامج Thunderbird (<https://www.thunderbird.net/>) للبريد الإلكتروني على نظام لينكس، فأداة Birdtray ممتازة لإبقاء البرنامج مفتوحا في الخلفية.  
+<https://github.com/gyunaev/birdtray>  
   
-تعديل: أما على ويندوز فهناك طريقة دون برامج من خلال الإعدادات تجدونها في التعليقات
+تعديل: أما على ويندوز فهناك طريقة دون برامج من خلال الإعدادات تجدونها في التعليقات  

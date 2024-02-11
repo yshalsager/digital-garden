@@ -1,9 +1,9 @@
 ---  
-created: 2022-08-09 19:18  
-updated: 2022-08-28 12:48  
+created: 2022-08-09 19:18:00  
+updated: 2022-08-28 12:48:00  
 title: برنامج activitywatch  
 share: true  
-website: ar/notes  
+website: ar/posts  
 tags:  
   - محتوى_منشور  
   - محتوى_تليجرام  
@@ -23,4 +23,4 @@ tags:
 - كل ما تحتاج فعله هو تثبيته وتثبيت إضافات المتصفح ومتابعة أين يذهب وقتك أثناء استخدام الجهاز  
   
 مزيد من المعلومات حول البرنامج ورابط التحميل من الموقع الرسمي  
-https://activitywatch.net/
+<https://activitywatch.net/>  
