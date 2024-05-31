@@ -19,6 +19,6 @@ permissions:
 
 jobs:
   deploy:
-    uses: ObsidianPublisher/actions/.github/workflows/deploy.yml@main
+    uses: Enveloppe/actions/.github/workflows/deploy.yml@main
     secrets:
       GH_PAT: ${{ secrets.GITHUB_TOKEN }}
