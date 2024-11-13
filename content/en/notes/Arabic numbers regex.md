@@ -1,6 +1,6 @@
 ---
-created: 2021-11-27 00:00:00
-updated: 2022-02-18 00:00:00
+created: 2021-11-27
+updated: 2022-02-18
 title: Arabic numbers regex
 share: true
 cssclass: ltr
