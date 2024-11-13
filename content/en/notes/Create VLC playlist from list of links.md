@@ -1,7 +1,7 @@
 ---
 title: Create VLC playlist from list of links
-created: 2022-10-18 16:32:00
-updated: 2022-10-18 16:32:00
+created: 2022-10-18
+updated: 2022-10-18
 aliases:
   - Create VLC playlist from list of links
 share: true
