@@ -18,6 +18,11 @@ website: /
 
 ---
 
+- [ملاحظات بلا تصنيف](/ar/notes/)
+- [ملاحظات الكتب](/ar/notes/books/)
+- [ملاحظات الوسائط](/ar/notes/media/)
+- [منشورات قصيرة](/ar/notes/posts/)
+- [المدونة](https://yshalsager.com/ar/)  
 Welcome to my digital garden!
 
 You can browse my notes through categories below, [tags](/tags/) page, or search.
