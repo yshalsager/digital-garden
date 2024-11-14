@@ -1,7 +1,7 @@
 ---
-title: index
+title: الرئيسية
 created: 2023-08-10 19:55:36
-updated: 2024-11-14 10:29:58
+updated: 2024-11-14 10:48:41
 share: true
 website: /
 ---
@@ -18,6 +18,8 @@ website: /
 
 ---
 
+<article class="ltr">
+
 Welcome to my digital garden!
 
 You can browse my notes through categories below, [tags](/tags/) page, or search.
@@ -25,3 +27,5 @@ You can browse my notes through categories below, [tags](/tags/) page, or search
 - [All Notes](/en/notes/)
 - [Programming Notes](/en/notes/programming/)
 - [The blog](https://yshalsager.com/en/)
+
+</article>
