@@ -57,7 +57,7 @@
     "js-yaml": "^4.1.0",
     "lightningcss": "^1.28.2",
     "mdast-util-find-and-replace": "^3.0.1",
-    "mdast-util-to-hast": "^13.2.0",
+    "mdast-util-to-hast": "^13.2.1",
     "mdast-util-to-string": "^4.0.0",
     "mermaid": "^11.4.1",
     "micromorph": "^0.4.5",
