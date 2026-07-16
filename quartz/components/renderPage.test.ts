@@ -1,6 +1,6 @@
 import test, { describe } from "node:test"
 import assert from "node:assert"
-import { renderTranscludes, pageResources } from "./renderPage"
+import { directionForLanguage, renderTranscludes, pageResources } from "./renderPage"
 import { Root, Element } from "hast"
 import { FullSlug } from "../util/path"
 import { GlobalConfiguration } from "../cfg"
@@ -40,6 +40,11 @@ function makePageData(slug: string, htmlAst: Root, extra?: Record<string, unknow
 }
 
 const cfg = { locale: "en-US" } as GlobalConfiguration
+
+test("uses page language direction", () => {
+  assert.equal(directionForLanguage("ar"), "rtl")
+  assert.equal(directionForLanguage("en"), "ltr")
+})
 
 function makeComponentData(
   allFiles: QuartzComponentProps["allFiles"],
