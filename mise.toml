@@ -1,0 +1,13 @@
+[tools]
+node = "24"
+
+[tasks.upgrade]
+description = "Upgrade Quartz and plugins"
+run = """
+npx quartz upgrade
+npx quartz plugin install --latest
+"""
+
+[tasks.dev]
+description = "Start the local Quartz preview"
+run = "npx quartz build --serve"
