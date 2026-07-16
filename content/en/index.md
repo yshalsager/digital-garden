@@ -1,6 +1,6 @@
 ---
 lang: en
-title: yshalsager's Digital Garden 🪴
+title: yshalsager's Digital Garden
 ---
 
 - [All Notes](/en/notes/)
