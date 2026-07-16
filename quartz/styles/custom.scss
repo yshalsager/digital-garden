@@ -1,0 +1,26 @@
+@use "./variables.scss" as *;
+
+.search .result-card {
+  text-align: start !important;
+}
+
+pre,
+code,
+figure[data-rehype-pretty-code-figure] * {
+  direction: ltr;
+}
+
+@media all and (max-width: 800px) {
+  html[dir="rtl"] .page > #quartz-body.lock-scroll > :not(.sidebar.left:has(.explorer)) {
+    transform: translateX(-100dvw);
+  }
+
+  html[dir="rtl"] .explorer.collapsed > .explorer-content,
+  html[dir="rtl"] .explorer .explorer-content {
+    transform: translateX(100vw);
+  }
+
+  html[dir="rtl"] .explorer:not(.collapsed) > .explorer-content {
+    transform: translateX(0);
+  }
+}
